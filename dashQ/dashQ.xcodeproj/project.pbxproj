@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E7EC60A1C3918CB007A5638 /* RootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EC6091C3918CB007A5638 /* RootNavigationViewController.m */; };
+		8E6E6BAC1C46930A007FB6E1 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6E6BAB1C46930A007FB6E1 /* RootNavigationController.m */; };
 		8E7EC60D1C391931007A5638 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EC60C1C391931007A5638 /* HomeViewController.m */; };
 		8E7EC6131C391F6E007A5638 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EC6111C391F6E007A5638 /* ItemViewController.m */; };
 		8E7EC6141C391F6E007A5638 /* ItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7EC6121C391F6E007A5638 /* ItemViewController.xib */; };
 		8EBD1FDA1C36C7D7009A014D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD1FD91C36C7D7009A014D /* main.m */; };
 		8EBD1FDD1C36C7D7009A014D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD1FDC1C36C7D7009A014D /* AppDelegate.m */; };
 		8EBD1FE01C36C7D7009A014D /* dashQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD1FDE1C36C7D7009A014D /* dashQ.xcdatamodeld */; };
-		8EBD1FE31C36C7D7009A014D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE21C36C7D7009A014D /* ViewController.m */; };
 		8EBD1FE61C36C7D7009A014D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE41C36C7D7009A014D /* Main.storyboard */; };
 		8EBD1FE81C36C7D7009A014D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE71C36C7D7009A014D /* Images.xcassets */; };
 		8EBD1FEB1C36C7D8009A014D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE91C36C7D8009A014D /* LaunchScreen.xib */; };
@@ -38,8 +37,8 @@
 /* Begin PBXFileReference section */
 		29A5FA14CEE611B815C37AB7 /* libPods-dashQ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dashQ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC5F02D7C54853B1D554756 /* Pods-dashQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dashQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dashQ/Pods-dashQ.debug.xcconfig"; sourceTree = "<group>"; };
-		8E7EC6081C3918CB007A5638 /* RootNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationViewController.h; sourceTree = "<group>"; };
-		8E7EC6091C3918CB007A5638 /* RootNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationViewController.m; sourceTree = "<group>"; };
+		8E6E6BAA1C46930A007FB6E1 /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		8E6E6BAB1C46930A007FB6E1 /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		8E7EC60B1C391931007A5638 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8E7EC60C1C391931007A5638 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		8E7EC6101C391F6E007A5638 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
@@ -51,8 +50,6 @@
 		8EBD1FDB1C36C7D7009A014D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8EBD1FDC1C36C7D7009A014D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8EBD1FDF1C36C7D7009A014D /* dashQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dashQ.xcdatamodel; sourceTree = "<group>"; };
-		8EBD1FE11C36C7D7009A014D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8EBD1FE21C36C7D7009A014D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8EBD1FE51C36C7D7009A014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EBD1FE71C36C7D7009A014D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8EBD1FEA1C36C7D8009A014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -96,10 +93,10 @@
 		8E7EC6041C3913BC007A5638 /* StoryBoard Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8E7EC6081C3918CB007A5638 /* RootNavigationViewController.h */,
-				8E7EC6091C3918CB007A5638 /* RootNavigationViewController.m */,
 				8E7EC60B1C391931007A5638 /* HomeViewController.h */,
 				8E7EC60C1C391931007A5638 /* HomeViewController.m */,
+				8E6E6BAA1C46930A007FB6E1 /* RootNavigationController.h */,
+				8E6E6BAB1C46930A007FB6E1 /* RootNavigationController.m */,
 			);
 			name = "StoryBoard Controllers";
 			sourceTree = "<group>";
@@ -112,13 +109,6 @@
 				8E7EC6121C391F6E007A5638 /* ItemViewController.xib */,
 			);
 			name = XibViewControllers;
-			sourceTree = "<group>";
-		};
-		8E7EC60F1C391EE1007A5638 /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = HeaderView;
 			sourceTree = "<group>";
 		};
 		8EBD1FCB1C36C7D7009A014D = {
@@ -145,13 +135,10 @@
 				8EF3F9DB1C43DE2B00B8AAFC /* CommonLibrary */,
 				8EF3F9DA1C43DE2300B8AAFC /* CommonView */,
 				8EF3F9D91C43DE1400B8AAFC /* CommonCell */,
-				8E7EC60F1C391EE1007A5638 /* HeaderView */,
 				8E7EC60E1C391EC2007A5638 /* XibViewControllers */,
 				8E7EC6041C3913BC007A5638 /* StoryBoard Controllers */,
 				8EBD1FDB1C36C7D7009A014D /* AppDelegate.h */,
 				8EBD1FDC1C36C7D7009A014D /* AppDelegate.m */,
-				8EBD1FE11C36C7D7009A014D /* ViewController.h */,
-				8EBD1FE21C36C7D7009A014D /* ViewController.m */,
 				8EBD1FE41C36C7D7009A014D /* Main.storyboard */,
 				8EBD1FE71C36C7D7009A014D /* Images.xcassets */,
 				8EBD1FE91C36C7D8009A014D /* LaunchScreen.xib */,
@@ -342,20 +329,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E7EC60A1C3918CB007A5638 /* RootNavigationViewController.m in Sources */,
 				8EBD1FDD1C36C7D7009A014D /* AppDelegate.m in Sources */,
 				8EF3F9F41C43DE5D00B8AAFC /* CommonGadgetView.m in Sources */,
 				8EBD1FDA1C36C7D7009A014D /* main.m in Sources */,
 				8EF3F9F81C43DE5D00B8AAFC /* CommonSearchBarView.m in Sources */,
 				8EF3F9FE1C43DE6300B8AAFC /* UIImage+Ext.m in Sources */,
 				8E7EC6131C391F6E007A5638 /* ItemViewController.m in Sources */,
-				8EBD1FE31C36C7D7009A014D /* ViewController.m in Sources */,
 				8EF3F9E41C43DE4A00B8AAFC /* CommonEmptyCell.m in Sources */,
 				8EF3F9F21C43DE5D00B8AAFC /* CommonHeaderView.m in Sources */,
 				8EF3F9FF1C43DE6300B8AAFC /* iOS8Utility.m in Sources */,
 				8EBD1FE01C36C7D7009A014D /* dashQ.xcdatamodeld in Sources */,
 				8E7EC60D1C391931007A5638 /* HomeViewController.m in Sources */,
 				8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */,
+				8E6E6BAC1C46930A007FB6E1 /* RootNavigationController.m in Sources */,
 				8EF3F9F61C43DE5D00B8AAFC /* CommonGadgetToolsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
