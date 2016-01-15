@@ -1,28 +1,22 @@
 //
-//  RootNavigationViewController.m
+//  RootNavigationController.m
 //  dashQ
 //
-//  Created by Hoyool Yoon on 1/3/16.
+//  Created by Hoyool Yoon on 1/13/16.
 //  Copyright © 2016 dashQ Inc. All rights reserved.
 //
 
-#import "RootNavigationViewController.h"
+#import "RootNavigationController.h"
 
-@interface RootNavigationViewController ()
+@interface RootNavigationController ()
 
 @end
 
-@implementation RootNavigationViewController
+@implementation RootNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.customNavigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.customNavigationBar.shadowImage = [UIImage new];
-    self.customNavigationBar.translucent = YES;
-    //self.navigationController.view.backgroundColor = [UIColor clearColor];
-   
 }
 
 - (void)didReceiveMemoryWarning {
