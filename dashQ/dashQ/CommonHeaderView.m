@@ -25,9 +25,16 @@
     CommonSearchBarView *searchBarView = [CommonSearchBarView view];
     searchBarView.delegate = self;
     
+    CustomInputView *customInputView = [CustomInputView view];
+    customInputView.delegate = self;
+    
+    [searchBarView.searchTextField setInputAccessoryView:customInputView];
+    
+    self.commonSearchBarView = searchBarView;
+    
     [self.searchBarView addSubview:searchBarView];
     
-    searchBarView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.commonSearchBarView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.searchBarView addConstraints:[NSLayoutConstraint
                                constraintsWithVisualFormat:@"H:|-0-[searchBarView]-0-|"
@@ -41,8 +48,7 @@
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(searchBarView)]];
     
-    self.searchBarView.hidden = YES;
-
+    self.searchBarView.alpha = 0.0f;
 
     
 }
@@ -69,12 +75,12 @@
 
 - (void)shrinkSearchBar {
     
-    self.searchBarView.hidden = YES;
-    
     [UIView animateWithDuration:0.3f
                      animations:^{
                          
                          self.searchBarViewWidthConstraint.constant = 0.0f;
+                         
+                         self.searchBarView.alpha = 0.0f;
                          
                          [self setNeedsDisplay];
                          [self layoutIfNeeded];
@@ -86,8 +92,6 @@
 
 - (void)expandSearchBar {
     
-    self.searchBarView.hidden = NO;
-    
     [UIView animateWithDuration:0.3f
                      animations:^{
                          
@@ -97,6 +101,8 @@
                          CGFloat leadingConstant = screenWidth - 60.0f - 40.0f;
                          
                          self.searchBarViewWidthConstraint.constant = leadingConstant;
+                         
+                         self.searchBarView.alpha = 1.0f;
                          
                          [self setNeedsDisplay];
                          [self layoutIfNeeded];
@@ -128,6 +134,14 @@
 
 - (void)showHeaderView {
     self.hidden = NO;
+}
+
+#pragma mark CustomInputViewDelegate
+- (void)customInputViewDoneTouched:(CustomInputView *)view {
+    [self endEditing:YES];
+    
+    self.searchButton.selected = !self.searchButton.selected;
+    [self shrinkSearchBar];
 }
 
 @end

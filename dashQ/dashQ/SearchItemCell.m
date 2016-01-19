@@ -20,4 +20,17 @@
     // Configure the view for the selected state
 }
 
++ (SearchItemCell *)cell {
+    
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"SearchItemCell"
+                                                  owner:self
+                                                options:nil];
+    
+    SearchItemCell *cell = [nibs objectAtIndex:0];
+    
+    return cell;
+
+    
+}
+
 @end

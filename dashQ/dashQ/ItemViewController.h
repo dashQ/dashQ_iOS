@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ItemViewController : UIViewController
+#import "ItemSubCell.h"
+#import "ItemMainTitleCell.h"
+
+//Header Views
+#import "ItemMainHeaderView.h"
+#import "ItemSubHeaderView.h"
+
+
+@interface ItemViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
++ (ItemViewController *)viewController;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *sections;
 
 @end

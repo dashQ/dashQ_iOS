@@ -16,8 +16,17 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
++ (ItemMainTitleCell *)cell {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"ItemMainTitleCell"
+                                                  owner:self
+                                                options:nil];
+    
+    ItemMainTitleCell *cell = [nibs objectAtIndex:0];
+    
+    return cell;
+}
 @end

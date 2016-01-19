@@ -17,6 +17,31 @@
 		8EBD1FE61C36C7D7009A014D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE41C36C7D7009A014D /* Main.storyboard */; };
 		8EBD1FE81C36C7D7009A014D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE71C36C7D7009A014D /* Images.xcassets */; };
 		8EBD1FEB1C36C7D8009A014D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD1FE91C36C7D8009A014D /* LaunchScreen.xib */; };
+		8EEEFE3C1C4A64BC00F5462A /* ItemMainTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE3A1C4A64BC00F5462A /* ItemMainTitleCell.m */; };
+		8EEEFE3D1C4A64BC00F5462A /* ItemMainTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE3B1C4A64BC00F5462A /* ItemMainTitleCell.xib */; };
+		8EEEFE411C4A64D000F5462A /* ItemSubCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE3F1C4A64D000F5462A /* ItemSubCell.m */; };
+		8EEEFE421C4A64D000F5462A /* ItemSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE401C4A64D000F5462A /* ItemSubCell.xib */; };
+		8EEEFE461C4A663300F5462A /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE441C4A663300F5462A /* ImagePickerViewController.m */; };
+		8EEEFE471C4A663300F5462A /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE451C4A663300F5462A /* ImagePickerViewController.xib */; };
+		8EEEFE4B1C4A664700F5462A /* HomeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE491C4A664700F5462A /* HomeItemCell.m */; };
+		8EEEFE4C1C4A664700F5462A /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE4A1C4A664700F5462A /* HomeItemCell.xib */; };
+		8EEEFE581C4A694C00F5462A /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE4E1C4A694C00F5462A /* WriteViewController.m */; };
+		8EEEFE591C4A694C00F5462A /* WriteToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE501C4A694C00F5462A /* WriteToolBarView.m */; };
+		8EEEFE5A1C4A694C00F5462A /* WriteToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE511C4A694C00F5462A /* WriteToolBarView.xib */; };
+		8EEEFE5B1C4A694C00F5462A /* WriteMainImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE531C4A694C00F5462A /* WriteMainImageCell.m */; };
+		8EEEFE5C1C4A694C00F5462A /* WriteMainImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE541C4A694C00F5462A /* WriteMainImageCell.xib */; };
+		8EEEFE5D1C4A694C00F5462A /* WriteSubInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE561C4A694C00F5462A /* WriteSubInfoCell.m */; };
+		8EEEFE5E1C4A694C00F5462A /* WriteSubInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE571C4A694C00F5462A /* WriteSubInfoCell.xib */; };
+		8EEEFE641C4B853E00F5462A /* ItemMainHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE631C4B853E00F5462A /* ItemMainHeaderView.m */; };
+		8EEEFE671C4B855500F5462A /* ItemSubHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE661C4B855500F5462A /* ItemSubHeaderView.m */; };
+		8EEEFE691C4B856300F5462A /* ItemMainHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE681C4B856300F5462A /* ItemMainHeaderView.xib */; };
+		8EEEFE6B1C4B857200F5462A /* ItemSubHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE6A1C4B857200F5462A /* ItemSubHeaderView.xib */; };
+		8EEEFE701C4E77E700F5462A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE6E1C4E77E700F5462A /* SearchViewController.m */; };
+		8EEEFE711C4E77E700F5462A /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE6F1C4E77E700F5462A /* SearchViewController.xib */; };
+		8EEEFE751C4E780B00F5462A /* SearchItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE731C4E780B00F5462A /* SearchItemCell.m */; };
+		8EEEFE761C4E780B00F5462A /* SearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE741C4E780B00F5462A /* SearchItemCell.xib */; };
+		8EEEFE791C4E816100F5462A /* CustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE781C4E816100F5462A /* CustomInputView.m */; };
+		8EEEFE7B1C4E816B00F5462A /* CustomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE7A1C4E816B00F5462A /* CustomInputView.xib */; };
 		8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3F9DD1C43DE4A00B8AAFC /* CommonTitleCell.m */; };
 		8EF3F9E31C43DE4A00B8AAFC /* CommonTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF3F9DE1C43DE4A00B8AAFC /* CommonTitleCell.xib */; };
 		8EF3F9E41C43DE4A00B8AAFC /* CommonEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3F9E01C43DE4A00B8AAFC /* CommonEmptyCell.m */; };
@@ -53,6 +78,45 @@
 		8EBD1FE51C36C7D7009A014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EBD1FE71C36C7D7009A014D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8EBD1FEA1C36C7D8009A014D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8EEEFE2E1C492B9600F5462A /* dashQ-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dashQ-PrefixHeader.pch"; sourceTree = "<group>"; };
+		8EEEFE391C4A64BC00F5462A /* ItemMainTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMainTitleCell.h; sourceTree = "<group>"; };
+		8EEEFE3A1C4A64BC00F5462A /* ItemMainTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemMainTitleCell.m; sourceTree = "<group>"; };
+		8EEEFE3B1C4A64BC00F5462A /* ItemMainTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemMainTitleCell.xib; sourceTree = "<group>"; };
+		8EEEFE3E1C4A64D000F5462A /* ItemSubCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSubCell.h; sourceTree = "<group>"; };
+		8EEEFE3F1C4A64D000F5462A /* ItemSubCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSubCell.m; sourceTree = "<group>"; };
+		8EEEFE401C4A64D000F5462A /* ItemSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSubCell.xib; sourceTree = "<group>"; };
+		8EEEFE431C4A663300F5462A /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		8EEEFE441C4A663300F5462A /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		8EEEFE451C4A663300F5462A /* ImagePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerViewController.xib; sourceTree = "<group>"; };
+		8EEEFE481C4A664700F5462A /* HomeItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeItemCell.h; sourceTree = "<group>"; };
+		8EEEFE491C4A664700F5462A /* HomeItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeItemCell.m; sourceTree = "<group>"; };
+		8EEEFE4A1C4A664700F5462A /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
+		8EEEFE4D1C4A694C00F5462A /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
+		8EEEFE4E1C4A694C00F5462A /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
+		8EEEFE4F1C4A694C00F5462A /* WriteToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteToolBarView.h; sourceTree = "<group>"; };
+		8EEEFE501C4A694C00F5462A /* WriteToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteToolBarView.m; sourceTree = "<group>"; };
+		8EEEFE511C4A694C00F5462A /* WriteToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteToolBarView.xib; sourceTree = "<group>"; };
+		8EEEFE521C4A694C00F5462A /* WriteMainImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteMainImageCell.h; sourceTree = "<group>"; };
+		8EEEFE531C4A694C00F5462A /* WriteMainImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteMainImageCell.m; sourceTree = "<group>"; };
+		8EEEFE541C4A694C00F5462A /* WriteMainImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteMainImageCell.xib; sourceTree = "<group>"; };
+		8EEEFE551C4A694C00F5462A /* WriteSubInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteSubInfoCell.h; sourceTree = "<group>"; };
+		8EEEFE561C4A694C00F5462A /* WriteSubInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteSubInfoCell.m; sourceTree = "<group>"; };
+		8EEEFE571C4A694C00F5462A /* WriteSubInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteSubInfoCell.xib; sourceTree = "<group>"; };
+		8EEEFE621C4B853E00F5462A /* ItemMainHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMainHeaderView.h; sourceTree = "<group>"; };
+		8EEEFE631C4B853E00F5462A /* ItemMainHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemMainHeaderView.m; sourceTree = "<group>"; };
+		8EEEFE651C4B855500F5462A /* ItemSubHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSubHeaderView.h; sourceTree = "<group>"; };
+		8EEEFE661C4B855500F5462A /* ItemSubHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSubHeaderView.m; sourceTree = "<group>"; };
+		8EEEFE681C4B856300F5462A /* ItemMainHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemMainHeaderView.xib; sourceTree = "<group>"; };
+		8EEEFE6A1C4B857200F5462A /* ItemSubHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSubHeaderView.xib; sourceTree = "<group>"; };
+		8EEEFE6D1C4E77E700F5462A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		8EEEFE6E1C4E77E700F5462A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		8EEEFE6F1C4E77E700F5462A /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		8EEEFE721C4E780B00F5462A /* SearchItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchItemCell.h; sourceTree = "<group>"; };
+		8EEEFE731C4E780B00F5462A /* SearchItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchItemCell.m; sourceTree = "<group>"; };
+		8EEEFE741C4E780B00F5462A /* SearchItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemCell.xib; sourceTree = "<group>"; };
+		8EEEFE771C4E816100F5462A /* CustomInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInputView.h; sourceTree = "<group>"; };
+		8EEEFE781C4E816100F5462A /* CustomInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInputView.m; sourceTree = "<group>"; };
+		8EEEFE7A1C4E816B00F5462A /* CustomInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInputView.xib; sourceTree = "<group>"; };
 		8EF3F9DC1C43DE4A00B8AAFC /* CommonTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTitleCell.h; sourceTree = "<group>"; };
 		8EF3F9DD1C43DE4A00B8AAFC /* CommonTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTitleCell.m; sourceTree = "<group>"; };
 		8EF3F9DE1C43DE4A00B8AAFC /* CommonTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleCell.xib; sourceTree = "<group>"; };
@@ -93,10 +157,13 @@
 		8E7EC6041C3913BC007A5638 /* StoryBoard Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8E7EC60B1C391931007A5638 /* HomeViewController.h */,
-				8E7EC60C1C391931007A5638 /* HomeViewController.m */,
 				8E6E6BAA1C46930A007FB6E1 /* RootNavigationController.h */,
 				8E6E6BAB1C46930A007FB6E1 /* RootNavigationController.m */,
+				8E7EC60B1C391931007A5638 /* HomeViewController.h */,
+				8E7EC60C1C391931007A5638 /* HomeViewController.m */,
+				8EEEFE481C4A664700F5462A /* HomeItemCell.h */,
+				8EEEFE491C4A664700F5462A /* HomeItemCell.m */,
+				8EEEFE4A1C4A664700F5462A /* HomeItemCell.xib */,
 			);
 			name = "StoryBoard Controllers";
 			sourceTree = "<group>";
@@ -104,9 +171,10 @@
 		8E7EC60E1C391EC2007A5638 /* XibViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8E7EC6101C391F6E007A5638 /* ItemViewController.h */,
-				8E7EC6111C391F6E007A5638 /* ItemViewController.m */,
-				8E7EC6121C391F6E007A5638 /* ItemViewController.xib */,
+				8EEEFE6C1C4E777900F5462A /* SearchViewController */,
+				8EEEFE611C4B84F300F5462A /* WriteViewController */,
+				8EEEFE601C4B84EF00F5462A /* ImagePickerController */,
+				8EEEFE5F1C4B84E000F5462A /* ItemViewController */,
 			);
 			name = XibViewControllers;
 			sourceTree = "<group>";
@@ -153,8 +221,72 @@
 			children = (
 				8EBD1FD81C36C7D7009A014D /* Info.plist */,
 				8EBD1FD91C36C7D7009A014D /* main.m */,
+				8EEEFE2E1C492B9600F5462A /* dashQ-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8EEEFE5F1C4B84E000F5462A /* ItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E7EC6101C391F6E007A5638 /* ItemViewController.h */,
+				8E7EC6111C391F6E007A5638 /* ItemViewController.m */,
+				8E7EC6121C391F6E007A5638 /* ItemViewController.xib */,
+				8EEEFE391C4A64BC00F5462A /* ItemMainTitleCell.h */,
+				8EEEFE3A1C4A64BC00F5462A /* ItemMainTitleCell.m */,
+				8EEEFE3B1C4A64BC00F5462A /* ItemMainTitleCell.xib */,
+				8EEEFE3E1C4A64D000F5462A /* ItemSubCell.h */,
+				8EEEFE3F1C4A64D000F5462A /* ItemSubCell.m */,
+				8EEEFE401C4A64D000F5462A /* ItemSubCell.xib */,
+				8EEEFE621C4B853E00F5462A /* ItemMainHeaderView.h */,
+				8EEEFE631C4B853E00F5462A /* ItemMainHeaderView.m */,
+				8EEEFE681C4B856300F5462A /* ItemMainHeaderView.xib */,
+				8EEEFE651C4B855500F5462A /* ItemSubHeaderView.h */,
+				8EEEFE661C4B855500F5462A /* ItemSubHeaderView.m */,
+				8EEEFE6A1C4B857200F5462A /* ItemSubHeaderView.xib */,
+			);
+			name = ItemViewController;
+			sourceTree = "<group>";
+		};
+		8EEEFE601C4B84EF00F5462A /* ImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				8EEEFE431C4A663300F5462A /* ImagePickerViewController.h */,
+				8EEEFE441C4A663300F5462A /* ImagePickerViewController.m */,
+				8EEEFE451C4A663300F5462A /* ImagePickerViewController.xib */,
+			);
+			name = ImagePickerController;
+			sourceTree = "<group>";
+		};
+		8EEEFE611C4B84F300F5462A /* WriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8EEEFE4D1C4A694C00F5462A /* WriteViewController.h */,
+				8EEEFE4E1C4A694C00F5462A /* WriteViewController.m */,
+				8EEEFE4F1C4A694C00F5462A /* WriteToolBarView.h */,
+				8EEEFE501C4A694C00F5462A /* WriteToolBarView.m */,
+				8EEEFE511C4A694C00F5462A /* WriteToolBarView.xib */,
+				8EEEFE521C4A694C00F5462A /* WriteMainImageCell.h */,
+				8EEEFE531C4A694C00F5462A /* WriteMainImageCell.m */,
+				8EEEFE541C4A694C00F5462A /* WriteMainImageCell.xib */,
+				8EEEFE551C4A694C00F5462A /* WriteSubInfoCell.h */,
+				8EEEFE561C4A694C00F5462A /* WriteSubInfoCell.m */,
+				8EEEFE571C4A694C00F5462A /* WriteSubInfoCell.xib */,
+			);
+			name = WriteViewController;
+			sourceTree = "<group>";
+		};
+		8EEEFE6C1C4E777900F5462A /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8EEEFE6D1C4E77E700F5462A /* SearchViewController.h */,
+				8EEEFE6E1C4E77E700F5462A /* SearchViewController.m */,
+				8EEEFE6F1C4E77E700F5462A /* SearchViewController.xib */,
+				8EEEFE721C4E780B00F5462A /* SearchItemCell.h */,
+				8EEEFE731C4E780B00F5462A /* SearchItemCell.m */,
+				8EEEFE741C4E780B00F5462A /* SearchItemCell.xib */,
+			);
+			name = SearchViewController;
 			sourceTree = "<group>";
 		};
 		8EF3F9D91C43DE1400B8AAFC /* CommonCell */ = {
@@ -185,6 +317,9 @@
 				8EF3F9EF1C43DE5D00B8AAFC /* CommonSearchBarView.h */,
 				8EF3F9F01C43DE5D00B8AAFC /* CommonSearchBarView.m */,
 				8EF3F9F11C43DE5D00B8AAFC /* CommonSearchBarView.xib */,
+				8EEEFE771C4E816100F5462A /* CustomInputView.h */,
+				8EEEFE781C4E816100F5462A /* CustomInputView.m */,
+				8EEEFE7A1C4E816B00F5462A /* CustomInputView.xib */,
 			);
 			name = CommonView;
 			sourceTree = "<group>";
@@ -277,15 +412,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF3F9F31C43DE5D00B8AAFC /* CommonHeaderView.xib in Resources */,
+				8EEEFE761C4E780B00F5462A /* SearchItemCell.xib in Resources */,
+				8EEEFE3D1C4A64BC00F5462A /* ItemMainTitleCell.xib in Resources */,
 				8EF3F9F71C43DE5D00B8AAFC /* CommonGadgetToolsView.xib in Resources */,
+				8EEEFE7B1C4E816B00F5462A /* CustomInputView.xib in Resources */,
+				8EEEFE691C4B856300F5462A /* ItemMainHeaderView.xib in Resources */,
+				8EEEFE5A1C4A694C00F5462A /* WriteToolBarView.xib in Resources */,
+				8EEEFE5E1C4A694C00F5462A /* WriteSubInfoCell.xib in Resources */,
 				8EF3F9E51C43DE4A00B8AAFC /* CommonEmptyCell.xib in Resources */,
 				8EBD1FE61C36C7D7009A014D /* Main.storyboard in Resources */,
 				8E7EC6141C391F6E007A5638 /* ItemViewController.xib in Resources */,
 				8EF3F9E31C43DE4A00B8AAFC /* CommonTitleCell.xib in Resources */,
 				8EF3F9F51C43DE5D00B8AAFC /* CommonGadgetView.xib in Resources */,
 				8EF3F9F91C43DE5D00B8AAFC /* CommonSearchBarView.xib in Resources */,
+				8EEEFE6B1C4B857200F5462A /* ItemSubHeaderView.xib in Resources */,
+				8EEEFE5C1C4A694C00F5462A /* WriteMainImageCell.xib in Resources */,
 				8EBD1FEB1C36C7D8009A014D /* LaunchScreen.xib in Resources */,
 				8EBD1FE81C36C7D7009A014D /* Images.xcassets in Resources */,
+				8EEEFE421C4A64D000F5462A /* ItemSubCell.xib in Resources */,
+				8EEEFE471C4A663300F5462A /* ImagePickerViewController.xib in Resources */,
+				8EEEFE711C4E77E700F5462A /* SearchViewController.xib in Resources */,
+				8EEEFE4C1C4A664700F5462A /* HomeItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,18 +477,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EBD1FDD1C36C7D7009A014D /* AppDelegate.m in Sources */,
+				8EEEFE411C4A64D000F5462A /* ItemSubCell.m in Sources */,
+				8EEEFE5D1C4A694C00F5462A /* WriteSubInfoCell.m in Sources */,
 				8EF3F9F41C43DE5D00B8AAFC /* CommonGadgetView.m in Sources */,
+				8EEEFE641C4B853E00F5462A /* ItemMainHeaderView.m in Sources */,
+				8EEEFE791C4E816100F5462A /* CustomInputView.m in Sources */,
+				8EEEFE581C4A694C00F5462A /* WriteViewController.m in Sources */,
 				8EBD1FDA1C36C7D7009A014D /* main.m in Sources */,
 				8EF3F9F81C43DE5D00B8AAFC /* CommonSearchBarView.m in Sources */,
 				8EF3F9FE1C43DE6300B8AAFC /* UIImage+Ext.m in Sources */,
+				8EEEFE461C4A663300F5462A /* ImagePickerViewController.m in Sources */,
 				8E7EC6131C391F6E007A5638 /* ItemViewController.m in Sources */,
 				8EF3F9E41C43DE4A00B8AAFC /* CommonEmptyCell.m in Sources */,
+				8EEEFE701C4E77E700F5462A /* SearchViewController.m in Sources */,
+				8EEEFE5B1C4A694C00F5462A /* WriteMainImageCell.m in Sources */,
+				8EEEFE4B1C4A664700F5462A /* HomeItemCell.m in Sources */,
+				8EEEFE3C1C4A64BC00F5462A /* ItemMainTitleCell.m in Sources */,
 				8EF3F9F21C43DE5D00B8AAFC /* CommonHeaderView.m in Sources */,
 				8EF3F9FF1C43DE6300B8AAFC /* iOS8Utility.m in Sources */,
 				8EBD1FE01C36C7D7009A014D /* dashQ.xcdatamodeld in Sources */,
 				8E7EC60D1C391931007A5638 /* HomeViewController.m in Sources */,
+				8EEEFE751C4E780B00F5462A /* SearchItemCell.m in Sources */,
+				8EEEFE671C4B855500F5462A /* ItemSubHeaderView.m in Sources */,
 				8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */,
 				8E6E6BAC1C46930A007FB6E1 /* RootNavigationController.m in Sources */,
+				8EEEFE591C4A694C00F5462A /* WriteToolBarView.m in Sources */,
 				8EF3F9F61C43DE5D00B8AAFC /* CommonGadgetToolsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +614,8 @@
 			baseConfigurationReference = 7AC5F02D7C54853B1D554756 /* Pods-dashQ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dashQ/dashQ-PrefixHeader.pch";
 				INFOPLIST_FILE = dashQ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -467,6 +629,8 @@
 			baseConfigurationReference = E27D17B202E551C23DD54BBF /* Pods-dashQ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dashQ/dashQ-PrefixHeader.pch";
 				INFOPLIST_FILE = dashQ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

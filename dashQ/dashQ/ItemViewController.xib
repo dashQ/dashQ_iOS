@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemViewController">
             <connections>
+                <outlet property="tableView" destination="sd2-Fn-r3c" id="T7k-wJ-dB3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-Fn-r3c">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-Fn-r3c">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.7015445938" green="1" blue="0.52335464949999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="VAt-r8-Et6"/>
+                        <outlet property="delegate" destination="-1" id="n9R-Np-RXM"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sd2-Fn-r3c" secondAttribute="bottom" id="35F-LR-B5z"/>
+                <constraint firstItem="sd2-Fn-r3c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Cm5-Qw-nWv"/>
+                <constraint firstAttribute="trailing" secondItem="sd2-Fn-r3c" secondAttribute="trailing" id="hM9-0y-bxz"/>
+                <constraint firstItem="sd2-Fn-r3c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nAj-Rw-C4y"/>
+            </constraints>
             <point key="canvasLocation" x="297" y="213"/>
         </view>
     </objects>

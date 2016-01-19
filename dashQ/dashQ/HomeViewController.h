@@ -8,11 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+//ViewControllers
+#import "ItemViewController.h"
+#import "WriteViewController.h"
 
-@property (assign, nonatomic) id delegate;
+//Table Cells
+#import "HomeItemCell.h"
+
+@interface HomeViewController : UIViewController <
+  UITableViewDelegate
+, UITableViewDataSource
+, CommonGadgetToolsViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) RootNavigationController *rootNavigationController;
+@property (strong, nonatomic) NSMutableArray *sections;
 
 @end

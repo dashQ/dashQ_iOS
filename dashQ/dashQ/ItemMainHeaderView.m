@@ -10,12 +10,14 @@
 
 @implementation ItemMainHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (ItemMainHeaderView *)view {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"ItemMainHeaderView"
+                                                  owner:self
+                                                options:nil];
+    
+    ItemMainHeaderView *view = [nibs objectAtIndex:0];
+    
+    return view;
 }
-*/
 
 @end

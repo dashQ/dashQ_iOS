@@ -10,4 +10,7 @@
 
 @interface ItemMainHeaderView : UIView
 
++ (ItemMainHeaderView *)view;
+@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
+
 @end

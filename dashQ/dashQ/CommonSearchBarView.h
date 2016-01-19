@@ -14,5 +14,12 @@
 
 + (CommonSearchBarView *)view;
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+
+@end
+
+@protocol CommonSearchViewDelegate <NSObject>
+
+- (void)textFieldBeginEditing:(CommonSearchBarView *)view;
 
 @end

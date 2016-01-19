@@ -10,12 +10,23 @@
 
 @implementation CustomInputView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
++ (CustomInputView *)view {
+    NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CustomInputView"
+                                                  owner:self
+                                                options:nil];
+    
+    CustomInputView *view = [nibs objectAtIndex:0];
+    
+    return view;
 }
-*/
+
+- (IBAction)doneTouched:(id)sender {
+    
+    if (self.delegate) {
+        [self.delegate customInputViewDoneTouched:self];
+    }
+    
+}
+
 
 @end

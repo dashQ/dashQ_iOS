@@ -11,7 +11,11 @@
 //Views
 #import "CommonSearchBarView.h"
 
-@interface CommonHeaderView : UIView
+//Input View
+#import "CustomInputView.h"
+
+@interface CommonHeaderView : UIView <
+CustomInputViewDelegate>
 
 @property (assign, nonatomic) id delegate;
 
@@ -23,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchBarViewWidthConstraint;
 
 @property (weak, nonatomic) IBOutlet UIView *searchBarView;
+@property (strong, nonatomic) CommonSearchBarView *commonSearchBarView;
 
 + (CommonHeaderView *)view;
 

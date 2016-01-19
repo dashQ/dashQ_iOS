@@ -10,4 +10,18 @@
 
 @interface CustomInputView : UIView
 
++ (CustomInputView *)view;
+
+@property (assign, nonatomic) id delegate;
+
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
+- (IBAction)doneTouched:(id)sender;
+
+
+@end
+
+@protocol CustomInputViewDelegate <NSObject>
+
+- (void)customInputViewDoneTouched:(CustomInputView *)view;
+
 @end

@@ -10,4 +10,9 @@
 
 @interface ItemSubHeaderView : UIView
 
++ (ItemSubHeaderView *)view;
+
+@property (weak, nonatomic) IBOutlet UILabel *subLabel;
+
+
 @end

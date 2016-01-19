@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define HEIGHT_ITEM_SUB_CELL 321.0f
+
 @interface ItemSubCell : UITableViewCell
+
++ (ItemSubCell *)cell;
+
+@property (weak, nonatomic) IBOutlet UIImageView *subImageView;
+@property (weak, nonatomic) IBOutlet UILabel *subInfoLabel;
+
 
 @end

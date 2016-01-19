@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController
+//Cells
+#import "SearchItemCell.h"
 
+@interface SearchViewController : UIViewController <
+UITableViewDelegate,
+UITableViewDataSource>
+
++ (SearchViewController *)viewController;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *sections;
 @end
