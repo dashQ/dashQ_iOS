@@ -20,12 +20,16 @@
     return view;
 }
 
-- (IBAction)doneTouched:(id)sender {
+- (IBAction)closeTouched:(id)sender {
     
     if (self.delegate) {
         [self.delegate customInputViewDoneTouched:self];
     }
+
     
+}
+
+- (IBAction)searchTouched:(id)sender {
 }
 
 

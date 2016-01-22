@@ -1,9 +1,9 @@
 //
 //  WriteViewController.h
-//  Hoot
+//  dashQ
 //
-//  Created by Hoyool Yoon on 10/13/15.
-//  Copyright (c) 2015 Hoot Inc. All rights reserved.
+//  Created by Hoyool Yoon on 1/21/16.
+//  Copyright © 2016 dashQ Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,6 +21,9 @@
 
 @interface WriteViewController : UIViewController <
 WriteMainImageCellDelegate>
+
++ (WriteViewController *)viewController;
+
 
 @property (strong, nonatomic) WriteToolBarView *toolBarView;
 

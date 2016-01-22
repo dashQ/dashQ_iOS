@@ -12,6 +12,9 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundImageView.image = [UIImage resizableImage:@"common_card_group"];
+    self.textBackgroundImageView.image = [UIImage resizableImage:@"common_card_group"];
+    self.subTextView.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,5 +32,10 @@
     
     return cell;
 }
+
+- (void)textViewDidBeginEditing:(UITextView *)textView; {
+    textView.text = @"";
+}
+
 
 @end

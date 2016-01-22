@@ -22,31 +22,24 @@ typedef enum {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self update];
-    
-    RootNavigationController *rootNavigationController = (RootNavigationController *)self.navigationController;
-    self.rootNavigationController = rootNavigationController;
-    
-    self.rootNavigationController.commonGadgetToolsView.delegate = self;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
-    [self.rootNavigationController.commonGadgetView setHidden:NO];
-    [self.rootNavigationController.commonHeaderView hideBackButton];
-    
+    [[RootNavigationController sharedInstance] hideGadgetView:NO];
+    [[RootNavigationController sharedInstance] hideBackButton:YES];    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     
-    [self.rootNavigationController.commonHeaderView showBackButton];
-    [self.rootNavigationController.commonGadgetToolsView hideAllTools];
+    [[RootNavigationController sharedInstance] hideBackButton:NO];
+    [[RootNavigationController sharedInstance] hideAllTools:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     
-    [self.rootNavigationController.commonGadgetView setHidden:YES];
-    [self.rootNavigationController.commonGadgetToolsView setHidden:YES];
+    [[RootNavigationController sharedInstance] hideGadgetView:YES];
+    [[RootNavigationController sharedInstance] hideGadgeToolsView:YES];
     
 }
 - (void)didReceiveMemoryWarning {
@@ -173,26 +166,6 @@ typedef enum {
     
     ItemViewController *itemViewController = [ItemViewController viewController];
     [self.navigationController pushViewController:itemViewController animated:YES];
-    
-}
-
-#pragma mark - CommonGadgetToolsView Delegate Methods
-
-- (void)commonGadgetToolsViewWriteTouched:(CommonGadgetToolsView *)view {
-    
-    [self performSegueWithIdentifier:@"WriteViewControllerPush" sender:self];
-    
-}
-
-- (void)commonGadgetToolsViewFavouritesTouched:(CommonGadgetToolsView *)view {
-    
-}
-
-- (void)commonGadgetToolsViewMyHootTouched:(CommonGadgetToolsView *)view {
-    
-}
-
-- (void)commonGadgetToolsViewSettingsTouched:(CommonGadgetToolsView *)view {
     
 }
 

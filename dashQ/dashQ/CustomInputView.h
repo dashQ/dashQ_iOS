@@ -14,8 +14,11 @@
 
 @property (assign, nonatomic) id delegate;
 
-@property (weak, nonatomic) IBOutlet UIButton *doneButton;
-- (IBAction)doneTouched:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+
+- (IBAction)closeTouched:(id)sender;
+- (IBAction)searchTouched:(id)sender;
 
 
 @end

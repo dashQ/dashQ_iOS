@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundImageView.image = [UIImage resizableImage:@"common_card_group"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

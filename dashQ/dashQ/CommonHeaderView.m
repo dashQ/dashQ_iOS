@@ -112,29 +112,18 @@
     
 }
 
-- (void)hideBackButton {
-    self.backButton.hidden = YES;
+- (void)hideBackButton:(BOOL)hide {
+    self.backButton.hidden = hide;
 }
 
-- (void)showBackButton {
-    self.backButton.hidden = NO;
+- (void)hideSearchButton:(BOOL)hide {
+    self.searchButton.hidden = hide;
 }
 
-- (void)hideSearchButton {
-    self.searchButton.hidden = YES;
+- (void)hideHeaderView:(BOOL)hide {
+    self.hidden = hide;
 }
 
-- (void)showSearchButton {
-    self.searchButton.hidden = NO;
-}
-
-- (void)hideHeaderView {
-    self.hidden = YES;
-}
-
-- (void)showHeaderView {
-    self.hidden = NO;
-}
 
 #pragma mark CustomInputViewDelegate
 - (void)customInputViewDoneTouched:(CustomInputView *)view {

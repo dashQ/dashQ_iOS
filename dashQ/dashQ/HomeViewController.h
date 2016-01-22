@@ -17,8 +17,7 @@
 
 @interface HomeViewController : UIViewController <
   UITableViewDelegate
-, UITableViewDataSource
-, CommonGadgetToolsViewDelegate>
+, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL 301.0f
+#define HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL 321.0f
 
 @interface WriteMainImageCell : UITableViewCell
 
@@ -17,7 +17,7 @@
 + (WriteMainImageCell *)cell;
 
 @property (weak, nonatomic) IBOutlet UITextField *mainTitleTextLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *addImageButton;
 - (IBAction)addImageTouched:(id)sender;
 

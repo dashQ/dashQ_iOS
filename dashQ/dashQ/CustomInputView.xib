@@ -21,7 +21,7 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="doneTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="OIh-6Y-EPQ"/>
+                        <action selector="closeTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="A9e-PJ-AKe"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RS-G3-JFV">
@@ -34,7 +34,7 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="doneTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="nI7-N2-iuY"/>
+                        <action selector="searchTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="9BZ-uK-va7"/>
                     </connections>
                 </button>
             </subviews>
@@ -48,7 +48,8 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="doneButton" destination="dnY-pG-fuW" id="47O-As-atX"/>
+                <outlet property="closeButton" destination="dnY-pG-fuW" id="7LK-ya-TmR"/>
+                <outlet property="searchButton" destination="8RS-G3-JFV" id="7mk-q1-BOy"/>
             </connections>
             <point key="canvasLocation" x="253" y="-49.5"/>
         </view>

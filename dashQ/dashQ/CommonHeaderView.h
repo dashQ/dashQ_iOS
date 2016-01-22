@@ -37,12 +37,9 @@ CustomInputViewDelegate>
 - (void)shrinkSearchBar;
 - (void)expandSearchBar;
 
-- (void)hideBackButton;
-- (void)showBackButton;
-- (void)hideSearchButton;
-- (void)showSearchButton;
-- (void)hideHeaderView;
-- (void)showHeaderView;
+- (void)hideHeaderView:(BOOL)hide;
+- (void)hideSearchButton:(BOOL)hide;
+- (void)hideBackButton:(BOOL)hide;
 
 @end
 

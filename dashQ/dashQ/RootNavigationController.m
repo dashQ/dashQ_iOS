@@ -14,6 +14,23 @@
 
 @implementation RootNavigationController
 
++ (RootNavigationController *)sharedInstance {
+    
+    static RootNavigationController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [RootNavigationController viewController];
+    });
+    return sharedInstance;
+}
+
++ (RootNavigationController *)viewController {
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    RootNavigationController *rootViewController = [sb instantiateViewControllerWithIdentifier:@"rootNavigationController"];
+    
+    return rootViewController;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -132,32 +149,61 @@
     
 }
 
-
-- (void)commonHeaderViewBackTouched:(CommonHeaderView *)view {
-    
-    [self popViewControllerAnimated:YES];
-    
+- (void)hideBackButton:(BOOL)hide {
+    [self.commonHeaderView hideBackButton:hide];
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+- (void)hideGadgetView:(BOOL)hide {
+    [self.commonGadgetView setHidden:hide];
+}
+
+- (void)hideAllTools:(BOOL)hide {
+    [self.commonGadgetToolsView hideAllTools];
+}
+
+- (void)hideGadgeToolsView:(BOOL)hide {
+    [self.commonGadgetToolsView setHidden:hide];
+}
+
+
+- (void)commonHeaderViewBackTouched:(CommonHeaderView *)view {
+    [self popViewControllerAnimated:YES];
+}
+
+- (void)sendToWriteViewController {
+    
+    WriteViewController *writeViewController = [WriteViewController viewController];
+    [self pushViewController:writeViewController animated:YES];
+}
 
 #pragma mark - Delegate Methods
 
 #pragma mark - CommonGadgetView Delegate Methods
 
 - (void)commonGadgetViewMenuTouched:(CommonGadgetView *)view {
-    
     [self.commonGadgetToolsView updateTools];
+}
+
+#pragma mark - CommonGadgetToolsView Delegate Methods
+
+- (void)commonGadgetToolsViewWriteTouched:(CommonGadgetToolsView *)view {
+    
+    [self sendToWriteViewController];
+}
+
+- (void)commonGadgetToolsViewFavouritesTouched:(CommonGadgetToolsView *)view {
     
 }
+
+- (void)commonGadgetToolsViewMyHootTouched:(CommonGadgetToolsView *)view {
+    
+}
+
+- (void)commonGadgetToolsViewSettingsTouched:(CommonGadgetToolsView *)view {
+    
+}
+
+
 
 
 @end

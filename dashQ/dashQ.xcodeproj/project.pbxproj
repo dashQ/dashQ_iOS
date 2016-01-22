@@ -25,7 +25,6 @@
 		8EEEFE471C4A663300F5462A /* ImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE451C4A663300F5462A /* ImagePickerViewController.xib */; };
 		8EEEFE4B1C4A664700F5462A /* HomeItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE491C4A664700F5462A /* HomeItemCell.m */; };
 		8EEEFE4C1C4A664700F5462A /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE4A1C4A664700F5462A /* HomeItemCell.xib */; };
-		8EEEFE581C4A694C00F5462A /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE4E1C4A694C00F5462A /* WriteViewController.m */; };
 		8EEEFE591C4A694C00F5462A /* WriteToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE501C4A694C00F5462A /* WriteToolBarView.m */; };
 		8EEEFE5A1C4A694C00F5462A /* WriteToolBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE511C4A694C00F5462A /* WriteToolBarView.xib */; };
 		8EEEFE5B1C4A694C00F5462A /* WriteMainImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE531C4A694C00F5462A /* WriteMainImageCell.m */; };
@@ -42,6 +41,9 @@
 		8EEEFE761C4E780B00F5462A /* SearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE741C4E780B00F5462A /* SearchItemCell.xib */; };
 		8EEEFE791C4E816100F5462A /* CustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE781C4E816100F5462A /* CustomInputView.m */; };
 		8EEEFE7B1C4E816B00F5462A /* CustomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE7A1C4E816B00F5462A /* CustomInputView.xib */; };
+		8EEEFE7F1C51279700F5462A /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE7D1C51279700F5462A /* WriteViewController.m */; };
+		8EEEFE801C51279700F5462A /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE7E1C51279700F5462A /* WriteViewController.xib */; };
+		8EEEFE831C52745800F5462A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE821C52745800F5462A /* RootViewController.m */; };
 		8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3F9DD1C43DE4A00B8AAFC /* CommonTitleCell.m */; };
 		8EF3F9E31C43DE4A00B8AAFC /* CommonTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF3F9DE1C43DE4A00B8AAFC /* CommonTitleCell.xib */; };
 		8EF3F9E41C43DE4A00B8AAFC /* CommonEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3F9E01C43DE4A00B8AAFC /* CommonEmptyCell.m */; };
@@ -91,8 +93,6 @@
 		8EEEFE481C4A664700F5462A /* HomeItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeItemCell.h; sourceTree = "<group>"; };
 		8EEEFE491C4A664700F5462A /* HomeItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeItemCell.m; sourceTree = "<group>"; };
 		8EEEFE4A1C4A664700F5462A /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
-		8EEEFE4D1C4A694C00F5462A /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
-		8EEEFE4E1C4A694C00F5462A /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
 		8EEEFE4F1C4A694C00F5462A /* WriteToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteToolBarView.h; sourceTree = "<group>"; };
 		8EEEFE501C4A694C00F5462A /* WriteToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteToolBarView.m; sourceTree = "<group>"; };
 		8EEEFE511C4A694C00F5462A /* WriteToolBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteToolBarView.xib; sourceTree = "<group>"; };
@@ -117,6 +117,11 @@
 		8EEEFE771C4E816100F5462A /* CustomInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInputView.h; sourceTree = "<group>"; };
 		8EEEFE781C4E816100F5462A /* CustomInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInputView.m; sourceTree = "<group>"; };
 		8EEEFE7A1C4E816B00F5462A /* CustomInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomInputView.xib; sourceTree = "<group>"; };
+		8EEEFE7C1C51279700F5462A /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
+		8EEEFE7D1C51279700F5462A /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
+		8EEEFE7E1C51279700F5462A /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
+		8EEEFE811C52745800F5462A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		8EEEFE821C52745800F5462A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		8EF3F9DC1C43DE4A00B8AAFC /* CommonTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTitleCell.h; sourceTree = "<group>"; };
 		8EF3F9DD1C43DE4A00B8AAFC /* CommonTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTitleCell.m; sourceTree = "<group>"; };
 		8EF3F9DE1C43DE4A00B8AAFC /* CommonTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleCell.xib; sourceTree = "<group>"; };
@@ -157,6 +162,8 @@
 		8E7EC6041C3913BC007A5638 /* StoryBoard Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8EEEFE811C52745800F5462A /* RootViewController.h */,
+				8EEEFE821C52745800F5462A /* RootViewController.m */,
 				8E6E6BAA1C46930A007FB6E1 /* RootNavigationController.h */,
 				8E6E6BAB1C46930A007FB6E1 /* RootNavigationController.m */,
 				8E7EC60B1C391931007A5638 /* HomeViewController.h */,
@@ -261,8 +268,9 @@
 		8EEEFE611C4B84F300F5462A /* WriteViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8EEEFE4D1C4A694C00F5462A /* WriteViewController.h */,
-				8EEEFE4E1C4A694C00F5462A /* WriteViewController.m */,
+				8EEEFE7C1C51279700F5462A /* WriteViewController.h */,
+				8EEEFE7D1C51279700F5462A /* WriteViewController.m */,
+				8EEEFE7E1C51279700F5462A /* WriteViewController.xib */,
 				8EEEFE4F1C4A694C00F5462A /* WriteToolBarView.h */,
 				8EEEFE501C4A694C00F5462A /* WriteToolBarView.m */,
 				8EEEFE511C4A694C00F5462A /* WriteToolBarView.xib */,
@@ -421,6 +429,7 @@
 				8EEEFE5E1C4A694C00F5462A /* WriteSubInfoCell.xib in Resources */,
 				8EF3F9E51C43DE4A00B8AAFC /* CommonEmptyCell.xib in Resources */,
 				8EBD1FE61C36C7D7009A014D /* Main.storyboard in Resources */,
+				8EEEFE801C51279700F5462A /* WriteViewController.xib in Resources */,
 				8E7EC6141C391F6E007A5638 /* ItemViewController.xib in Resources */,
 				8EF3F9E31C43DE4A00B8AAFC /* CommonTitleCell.xib in Resources */,
 				8EF3F9F51C43DE5D00B8AAFC /* CommonGadgetView.xib in Resources */,
@@ -482,7 +491,6 @@
 				8EF3F9F41C43DE5D00B8AAFC /* CommonGadgetView.m in Sources */,
 				8EEEFE641C4B853E00F5462A /* ItemMainHeaderView.m in Sources */,
 				8EEEFE791C4E816100F5462A /* CustomInputView.m in Sources */,
-				8EEEFE581C4A694C00F5462A /* WriteViewController.m in Sources */,
 				8EBD1FDA1C36C7D7009A014D /* main.m in Sources */,
 				8EF3F9F81C43DE5D00B8AAFC /* CommonSearchBarView.m in Sources */,
 				8EF3F9FE1C43DE6300B8AAFC /* UIImage+Ext.m in Sources */,
@@ -499,9 +507,11 @@
 				8E7EC60D1C391931007A5638 /* HomeViewController.m in Sources */,
 				8EEEFE751C4E780B00F5462A /* SearchItemCell.m in Sources */,
 				8EEEFE671C4B855500F5462A /* ItemSubHeaderView.m in Sources */,
+				8EEEFE831C52745800F5462A /* RootViewController.m in Sources */,
 				8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */,
 				8E6E6BAC1C46930A007FB6E1 /* RootNavigationController.m in Sources */,
 				8EEEFE591C4A694C00F5462A /* WriteToolBarView.m in Sources */,
+				8EEEFE7F1C51279700F5462A /* WriteViewController.m in Sources */,
 				8EF3F9F61C43DE5D00B8AAFC /* CommonGadgetToolsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

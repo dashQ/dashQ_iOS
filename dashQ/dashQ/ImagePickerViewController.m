@@ -20,7 +20,14 @@
     
     [self.takeButton setBackgroundImage:[UIImage resizableImage:@"common_btn_basic_n"] forState:UIControlStateNormal];
     [self.chooseButton setBackgroundImage:[UIImage resizableImage:@"common_btn_basic_n"] forState:UIControlStateNormal];
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [RootNavigationController sharedInstance].commonHeaderView.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [RootNavigationController sharedInstance].commonHeaderView.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,13 +43,6 @@
 }
 
 - (IBAction)takePhotoTouched:(id)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
     
 }
 

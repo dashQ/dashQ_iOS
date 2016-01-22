@@ -1,25 +1,32 @@
 //
 //  WriteViewController.m
-//  Hoot
+//  dashQ
 //
-//  Created by Hoyool Yoon on 10/13/15.
-//  Copyright (c) 2015 Hoot Inc. All rights reserved.
+//  Created by Hoyool Yoon on 1/21/16.
+//  Copyright © 2016 dashQ Inc. All rights reserved.
 //
 
 #import "WriteViewController.h"
 
 typedef enum {
-    HootWriteTitleSection
-    ,HootWriteMainImageSection
-    ,HootWriteSubInfoSection
-    ,HootWriteEmptySection
-} HootWriteSections;
+    WriteTitleSection
+    ,WriteMainImageSection
+    ,WriteSubInfoSection
+    ,WriteEmptySection
+} WriteSections;
 
 @interface WriteViewController ()
 
 @end
 
 @implementation WriteViewController
+
++ (WriteViewController *)viewController {
+    
+    WriteViewController *viewController = [[WriteViewController alloc] initWithNibName:@"WriteViewController" bundle:nil];
+    
+    return viewController;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,11 +73,11 @@ typedef enum {
 - (void)update {
     
     NSMutableArray *sections = [NSMutableArray array];
-    [sections addObject:@(HootWriteTitleSection)];
-    [sections addObject:@(HootWriteMainImageSection)];
-    [sections addObject:@(HootWriteSubInfoSection)];
+    [sections addObject:@(WriteTitleSection)];
+    [sections addObject:@(WriteMainImageSection)];
+    [sections addObject:@(WriteSubInfoSection)];
     
-    [sections addObject:@(HootWriteEmptySection)];
+    [sections addObject:@(WriteEmptySection)];
     
     self.sections = sections;
     
@@ -78,8 +85,8 @@ typedef enum {
     
 }
 
-- (HootWriteSections)sectionIndex:(NSInteger)section {
-    HootWriteSections sectionIndex = (HootWriteSections)[[self.sections objectAtIndex:section] integerValue];
+- (WriteSections)sectionIndex:(NSInteger)section {
+    WriteSections sectionIndex = (WriteSections)[[self.sections objectAtIndex:section] integerValue];
     return sectionIndex;
 }
 
@@ -89,16 +96,16 @@ typedef enum {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    HootWriteSections sectionIndex = [self sectionIndex:section];
+    WriteSections sectionIndex = [self sectionIndex:section];
     
     switch (sectionIndex) {
-        case HootWriteTitleSection:
+        case WriteTitleSection:
             return 1;
-        case HootWriteMainImageSection:
+        case WriteMainImageSection:
             return 1;
-        case HootWriteSubInfoSection:
+        case WriteSubInfoSection:
             return 1;
-        case HootWriteEmptySection:
+        case WriteEmptySection:
             return 1;
         default:
             break;
@@ -110,10 +117,10 @@ typedef enum {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HootWriteSections sectionIndex = [self sectionIndex:indexPath.section];
+    WriteSections sectionIndex = [self sectionIndex:indexPath.section];
     
     switch (sectionIndex) {
-        case HootWriteTitleSection: {
+        case WriteTitleSection: {
             
             static NSString *identifier = @"CommonTitleCell";
             
@@ -127,7 +134,7 @@ typedef enum {
             return cell;
         }
             
-        case HootWriteMainImageSection: {
+        case WriteMainImageSection: {
             
             static NSString *identifier = @"WriteMainImageCell";
             
@@ -135,12 +142,13 @@ typedef enum {
             if (!cell) {
                 cell = [WriteMainImageCell cell];
                 cell.delegate = self;
+                [self addCustomInputViewTextField:cell.mainTitleTextLabel];
             }
             
             return cell;
         }
             
-        case HootWriteSubInfoSection: {
+        case WriteSubInfoSection: {
             
             static NSString *identifier = @"WriteSubInfoCell";
             
@@ -148,12 +156,14 @@ typedef enum {
             if (!cell) {
                 cell = [WriteSubInfoCell cell];
                 cell.delegate = self;
+                [self addCustomInputViewTextField:cell.subTextField];
+                [self addCustomInputViewTextView:cell.subTextView];
             }
             
             return cell;
         }
-
-        case HootWriteEmptySection: {
+            
+        case WriteEmptySection: {
             
             static NSString *identifier = @"CommonEmptyCell";
             
@@ -174,21 +184,20 @@ typedef enum {
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-    HootWriteSections sectionIndex = [self sectionIndex:indexPath.section];
+    WriteSections sectionIndex = [self sectionIndex:indexPath.section];
     
     switch (sectionIndex) {
-        
-        case HootWriteTitleSection:
+            
+        case WriteTitleSection:
             return HEIGHT_HOOT_COMMON_TITLE_CELL;
             
-        case HootWriteMainImageSection:
-            
+        case WriteMainImageSection:
             return [self heightDynamicCell:HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL alpha375:12.0f alpha414:18.0f];
             
-        case HootWriteSubInfoSection:
+        case WriteSubInfoSection:
             return [self heightDynamicCell:HEIGHT_HOOT_WRITE_SUB_INFO_CELL alpha375:12.0f alpha414:18.0f];
             
-        case HootWriteEmptySection:
+        case WriteEmptySection:
             return HEIGHT_HOOT_COMMON_EMPTY_CELL;
             
         default:
@@ -200,10 +209,10 @@ typedef enum {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HootWriteSections sectionIndex = [self sectionIndex:indexPath.section];
+    WriteSections sectionIndex = [self sectionIndex:indexPath.section];
     
     switch (sectionIndex) {
-        case HootWriteMainImageSection: {
+        case WriteMainImageSection: {
             
         }
             break;
@@ -213,23 +222,35 @@ typedef enum {
     }
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)addCustomInputViewTextField:(UITextField *)textField {
+    
+    CustomInputView *customInputView = [CustomInputView view];
+    customInputView.searchButton.hidden = YES;
+    customInputView.delegate = self;
+    
+    [textField setInputAccessoryView:customInputView];
 }
-*/
+
+- (void)addCustomInputViewTextView:(UITextView *)textView {
+    
+    CustomInputView *customInputView = [CustomInputView view];
+    customInputView.searchButton.hidden = YES;
+    customInputView.delegate = self;
+    
+    [textView setInputAccessoryView:customInputView];
+}
+
+#pragma mark CustomInputViewDelegate
+- (void)customInputViewDoneTouched:(CustomInputView *)view {
+    [self.view endEditing:YES];
+}
 
 #pragma mark Table Cell Delegate Methods
 
 - (void)writeMainImageCellAddImageTouched:(WriteMainImageCell *)cell {
     
     ImagePickerViewController *imagePickerViewController = [ImagePickerViewController viewController];
-    [self.navigationController pushViewController:imagePickerViewController animated:YES];
+    [self presentViewController:imagePickerViewController animated:YES completion:nil];
     
 }
 
