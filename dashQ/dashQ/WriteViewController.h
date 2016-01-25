@@ -24,6 +24,7 @@
 
 @interface WriteViewController : UIViewController <
 WriteMainImageCellDelegate
+,WriteSubInfoCellDelegate
 ,UIImagePickerControllerDelegate
 ,UINavigationControllerDelegate>
 

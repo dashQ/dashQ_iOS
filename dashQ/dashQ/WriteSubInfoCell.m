@@ -38,4 +38,11 @@
 }
 
 
+- (IBAction)addImageTouched:(id)sender {
+    
+    if (self.delegate) {
+        [self.delegate writeSubInfoCellAddImageTouched:self];
+    }
+}
+
 @end

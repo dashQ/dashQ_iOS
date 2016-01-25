@@ -45,6 +45,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImageTouched:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hx5-M0-SDV"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2e-Yo-vuk">
                                 <rect key="frame" x="8" y="305" width="288" height="140"/>

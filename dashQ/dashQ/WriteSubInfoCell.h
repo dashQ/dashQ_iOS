@@ -26,4 +26,12 @@ UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *subTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *textBackgroundImageView;
 
+- (IBAction)addImageTouched:(id)sender;
+
+@end
+
+@protocol WriteSubInfoCellDelegate <NSObject>
+
+- (void)writeSubInfoCellAddImageTouched:(WriteSubInfoCell *)cell;
+
 @end

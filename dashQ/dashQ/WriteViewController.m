@@ -114,8 +114,9 @@ typedef enum {
     switch (sectionIndex) {
         case WriteTitleSection:
             return 1;
-        case WriteReviewSection:
-            return 1;
+        case WriteReviewSection: {
+            return self.writeModelArray.count;
+        }
         case WriteEmptySection:
             return 1;
         default:
@@ -289,14 +290,7 @@ typedef enum {
     [self.view endEditing:YES];
 }
 
-#pragma mark Table Cell Delegate Methods
-
-- (void)writeMainImageCellAddImageTouched:(WriteMainImageCell *)cell {
-    
-    //ImagePickerViewController *imagePickerViewController = [ImagePickerViewController viewController];
-    //[self presentViewController:imagePickerViewController animated:YES completion:nil];
-    
-    self.selectedRowIndex = cell.rowIndex;
+- (void)callImagePickerController {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
@@ -306,11 +300,43 @@ typedef enum {
     [self presentViewController:picker animated:YES completion:nil];
 }
 
+#pragma mark WriteMainImageCell Delegate Methods
+
+- (void)writeMainImageCellAddImageTouched:(WriteMainImageCell *)cell {
+    
+    //ImagePickerViewController *imagePickerViewController = [ImagePickerViewController viewController];
+    //[self presentViewController:imagePickerViewController animated:YES completion:nil];
+    
+    self.selectedRowIndex = cell.rowIndex;
+    [self callImagePickerController];
+}
+
+#pragma mark WriteSubInfoCell Delegate Methods
+
+- (void)writeSubInfoCellAddImageTouched:(WriteSubInfoCell *)cell {
+    
+    self.selectedRowIndex = cell.rowIndex;
+    [self callImagePickerController];
+}
+
+- (void)addSelectedImageToArray:(NSInteger)rowIndex selectedImage:(UIImage *)selectedImage {
+    
+    if (self.writeModelArray.count > rowIndex) {
+        
+        WriteInfoModel *writeModel = [self.writeModelArray objectAtIndex:rowIndex];
+        writeModel.writeImage = selectedImage;
+    }
+}
+
+
+#pragma mark UIImagePickerController Delegate Methods
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.selectedMainImage = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    [self addSelectedImageToArray:self.selectedRowIndex selectedImage:chosenImage];
     
     [self.tableView reloadData];
     
