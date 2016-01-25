@@ -19,11 +19,15 @@
 //ViewControllers
 #import "ImagePickerViewController.h"
 
+//Models
+#import "WriteInfoModel.h"
+
 @interface WriteViewController : UIViewController <
-WriteMainImageCellDelegate>
+WriteMainImageCellDelegate
+,UIImagePickerControllerDelegate
+,UINavigationControllerDelegate>
 
 + (WriteViewController *)viewController;
-
 
 @property (strong, nonatomic) WriteToolBarView *toolBarView;
 
@@ -32,4 +36,9 @@ WriteMainImageCellDelegate>
 
 @property (strong, nonatomic) NSString *viewControllerTitle;
 
+@property (assign, nonatomic) NSInteger selectedRowIndex;
+@property (strong, nonatomic) NSMutableArray *writeModelArray;
+
 @end
+
+

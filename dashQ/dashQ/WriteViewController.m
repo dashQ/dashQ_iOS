@@ -10,8 +10,7 @@
 
 typedef enum {
     WriteTitleSection
-    ,WriteMainImageSection
-    ,WriteSubInfoSection
+    ,WriteReviewSection
     ,WriteEmptySection
 } WriteSections;
 
@@ -31,13 +30,29 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self update];
+    [self initWriteDataArray];
     [self initToolBar];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initWriteDataArray {
+    
+    self.writeModelArray = [NSMutableArray array];
+    
+    WriteInfoModel *writeMainModel = [[WriteInfoModel alloc] init];
+    writeMainModel.modelType = WriteMainType;
+    
+    WriteInfoModel *writeSubModel = [[WriteInfoModel alloc] init];
+    writeSubModel.modelType = WriteSubType;
+    
+    [self.writeModelArray addObject:writeMainModel];
+    [self.writeModelArray addObject:writeSubModel];
+    
+    [self update];
 }
 
 - (void)initToolBar {
@@ -74,9 +89,7 @@ typedef enum {
     
     NSMutableArray *sections = [NSMutableArray array];
     [sections addObject:@(WriteTitleSection)];
-    [sections addObject:@(WriteMainImageSection)];
-    [sections addObject:@(WriteSubInfoSection)];
-    
+    [sections addObject:@(WriteReviewSection)];
     [sections addObject:@(WriteEmptySection)];
     
     self.sections = sections;
@@ -101,9 +114,7 @@ typedef enum {
     switch (sectionIndex) {
         case WriteTitleSection:
             return 1;
-        case WriteMainImageSection:
-            return 1;
-        case WriteSubInfoSection:
+        case WriteReviewSection:
             return 1;
         case WriteEmptySection:
             return 1;
@@ -134,33 +145,61 @@ typedef enum {
             return cell;
         }
             
-        case WriteMainImageSection: {
+        case WriteReviewSection: {
             
-            static NSString *identifier = @"WriteMainImageCell";
+            NSInteger rowIndex = indexPath.row;
+            WriteInfoModel *writeModel = [self.writeModelArray objectAtIndex:rowIndex];
             
-            WriteMainImageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-            if (!cell) {
-                cell = [WriteMainImageCell cell];
-                cell.delegate = self;
-                [self addCustomInputViewTextField:cell.mainTitleTextLabel];
+            if (writeModel.modelType == WriteMainType) {
+            
+                static NSString *identifier = @"WriteMainImageCell";
+            
+                WriteMainImageCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+                if (!cell) {
+                    cell = [WriteMainImageCell cell];
+                    cell.delegate = self;
+                    [self addCustomInputViewTextField:cell.mainTitleTextLabel];
+                }
+                
+                cell.rowIndex = rowIndex;
+            
+                if (writeModel.writeImage) {
+                    cell.selectedImageView.image = writeModel.writeImage;
+                    cell.addImageButton.titleLabel.text = @"";
+                }
+                else {
+                    cell.addImageButton.titleLabel.text = @"+";
+                    cell.selectedImageView.image = nil;
+                }
+            
+                return cell;
             }
             
-            return cell;
-        }
+            else if (writeModel.modelType == WriteSubType) {
             
-        case WriteSubInfoSection: {
+                static NSString *identifier = @"WriteSubInfoCell";
             
-            static NSString *identifier = @"WriteSubInfoCell";
+                WriteSubInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+                if (!cell) {
+                    cell = [WriteSubInfoCell cell];
+                    cell.delegate = self;
+                    [self addCustomInputViewTextField:cell.subTextField];
+                    [self addCustomInputViewTextView:cell.subTextView];
+                }
             
-            WriteSubInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-            if (!cell) {
-                cell = [WriteSubInfoCell cell];
-                cell.delegate = self;
-                [self addCustomInputViewTextField:cell.subTextField];
-                [self addCustomInputViewTextView:cell.subTextView];
+                cell.rowIndex = rowIndex;
+                
+                if (writeModel.writeImage) {
+                    cell.selectedImageView.image = writeModel.writeImage;
+                    cell.subImageButton.titleLabel.text = @"";
+                }
+                else {
+                    cell.subImageButton.titleLabel.text = @"+";
+                    cell.selectedImageView.image = nil;
+                }
+                
+                return cell;
             }
-            
-            return cell;
         }
             
         case WriteEmptySection: {
@@ -191,12 +230,17 @@ typedef enum {
         case WriteTitleSection:
             return HEIGHT_HOOT_COMMON_TITLE_CELL;
             
-        case WriteMainImageSection:
-            return [self heightDynamicCell:HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL alpha375:12.0f alpha414:18.0f];
+        case WriteReviewSection: {
             
-        case WriteSubInfoSection:
-            return [self heightDynamicCell:HEIGHT_HOOT_WRITE_SUB_INFO_CELL alpha375:12.0f alpha414:18.0f];
+            WriteInfoModel *writeModel = [self.writeModelArray objectAtIndex:indexPath.row];
             
+            if (writeModel.modelType == WriteMainType) {
+                return [self heightDynamicCell:HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL alpha375:12.0f alpha414:18.0f];
+            }
+            else if (writeModel.modelType == WriteSubType) {
+                return [self heightDynamicCell:HEIGHT_HOOT_WRITE_SUB_INFO_CELL alpha375:12.0f alpha414:18.0f];
+            }
+        }
         case WriteEmptySection:
             return HEIGHT_HOOT_COMMON_EMPTY_CELL;
             
@@ -212,7 +256,7 @@ typedef enum {
     WriteSections sectionIndex = [self sectionIndex:indexPath.section];
     
     switch (sectionIndex) {
-        case WriteMainImageSection: {
+        case WriteReviewSection: {
             
         }
             break;
@@ -249,9 +293,31 @@ typedef enum {
 
 - (void)writeMainImageCellAddImageTouched:(WriteMainImageCell *)cell {
     
-    ImagePickerViewController *imagePickerViewController = [ImagePickerViewController viewController];
-    [self presentViewController:imagePickerViewController animated:YES completion:nil];
+    //ImagePickerViewController *imagePickerViewController = [ImagePickerViewController viewController];
+    //[self presentViewController:imagePickerViewController animated:YES completion:nil];
     
+    self.selectedRowIndex = cell.rowIndex;
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.selectedMainImage = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.tableView reloadData];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

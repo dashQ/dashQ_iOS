@@ -44,6 +44,7 @@
 		8EEEFE7F1C51279700F5462A /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE7D1C51279700F5462A /* WriteViewController.m */; };
 		8EEEFE801C51279700F5462A /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EEEFE7E1C51279700F5462A /* WriteViewController.xib */; };
 		8EEEFE831C52745800F5462A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE821C52745800F5462A /* RootViewController.m */; };
+		8EEEFE861C5518B600F5462A /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEFE851C5518B600F5462A /* WriteInfoModel.m */; };
 		8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3F9DD1C43DE4A00B8AAFC /* CommonTitleCell.m */; };
 		8EF3F9E31C43DE4A00B8AAFC /* CommonTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF3F9DE1C43DE4A00B8AAFC /* CommonTitleCell.xib */; };
 		8EF3F9E41C43DE4A00B8AAFC /* CommonEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3F9E01C43DE4A00B8AAFC /* CommonEmptyCell.m */; };
@@ -122,6 +123,8 @@
 		8EEEFE7E1C51279700F5462A /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
 		8EEEFE811C52745800F5462A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		8EEEFE821C52745800F5462A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		8EEEFE841C5518B600F5462A /* WriteInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteInfoModel.h; sourceTree = "<group>"; };
+		8EEEFE851C5518B600F5462A /* WriteInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteInfoModel.m; sourceTree = "<group>"; };
 		8EF3F9DC1C43DE4A00B8AAFC /* CommonTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTitleCell.h; sourceTree = "<group>"; };
 		8EF3F9DD1C43DE4A00B8AAFC /* CommonTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTitleCell.m; sourceTree = "<group>"; };
 		8EF3F9DE1C43DE4A00B8AAFC /* CommonTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonTitleCell.xib; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				8EEEFE551C4A694C00F5462A /* WriteSubInfoCell.h */,
 				8EEEFE561C4A694C00F5462A /* WriteSubInfoCell.m */,
 				8EEEFE571C4A694C00F5462A /* WriteSubInfoCell.xib */,
+				8EEEFE841C5518B600F5462A /* WriteInfoModel.h */,
+				8EEEFE851C5518B600F5462A /* WriteInfoModel.m */,
 			);
 			name = WriteViewController;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				8EEEFE831C52745800F5462A /* RootViewController.m in Sources */,
 				8EF3F9E21C43DE4A00B8AAFC /* CommonTitleCell.m in Sources */,
 				8E6E6BAC1C46930A007FB6E1 /* RootNavigationController.m in Sources */,
+				8EEEFE861C5518B600F5462A /* WriteInfoModel.m in Sources */,
 				8EEEFE591C4A694C00F5462A /* WriteToolBarView.m in Sources */,
 				8EEEFE7F1C51279700F5462A /* WriteViewController.m in Sources */,
 				8EF3F9F61C43DE5D00B8AAFC /* CommonGadgetToolsView.m in Sources */,

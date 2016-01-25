@@ -16,6 +16,8 @@ UIImagePickerControllerDelegate
 
 - (IBAction)takePhotoTouched:(id)sender;
 - (IBAction)choosePhotoTouched:(id)sender;
+- (IBAction)closeTouched:(id)sender;
+- (IBAction)saveImageTouched:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *takeButton;

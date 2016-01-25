@@ -32,9 +32,16 @@
                                     <constraint firstAttribute="width" secondItem="Mo3-OW-8PS" secondAttribute="height" multiplier="16:13" id="N5R-Wa-M4f"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-P9-dsF">
+                                <rect key="frame" x="8" y="58" width="288" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sMh-P9-dsF" secondAttribute="height" multiplier="16:13" id="XUg-zq-RZT"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6d-HG-UOl">
                                 <rect key="frame" x="8" y="58" width="288" height="234"/>
-                                <state key="normal" title="Add Image">
+                                <fontDescription key="fontDescription" type="system" pointSize="105"/>
+                                <state key="normal" title="+">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -49,8 +56,12 @@
                             <constraint firstItem="f6d-HG-UOl" firstAttribute="top" secondItem="Mo3-OW-8PS" secondAttribute="top" id="1I9-0N-w6R"/>
                             <constraint firstAttribute="trailing" secondItem="be4-hQ-PFo" secondAttribute="trailing" constant="8" id="3OZ-sV-caU"/>
                             <constraint firstAttribute="trailing" secondItem="Mo3-OW-8PS" secondAttribute="trailing" constant="8" id="690-b2-iIF"/>
+                            <constraint firstItem="sMh-P9-dsF" firstAttribute="top" secondItem="Mo3-OW-8PS" secondAttribute="top" id="7vj-Bj-3iR"/>
                             <constraint firstItem="Mo3-OW-8PS" firstAttribute="leading" secondItem="uIx-Ww-Uzt" secondAttribute="leading" constant="8" id="DuO-Cp-Sng"/>
+                            <constraint firstItem="sMh-P9-dsF" firstAttribute="width" secondItem="sMh-P9-dsF" secondAttribute="height" multiplier="16:13" id="Ndn-dP-EKj"/>
+                            <constraint firstAttribute="trailing" secondItem="sMh-P9-dsF" secondAttribute="trailing" constant="8" id="QQZ-qG-DkX"/>
                             <constraint firstItem="f6d-HG-UOl" firstAttribute="trailing" secondItem="Mo3-OW-8PS" secondAttribute="trailing" id="RbO-qr-Cjs"/>
+                            <constraint firstItem="sMh-P9-dsF" firstAttribute="leading" secondItem="uIx-Ww-Uzt" secondAttribute="leading" constant="8" id="WfP-BS-VKL"/>
                             <constraint firstItem="f6d-HG-UOl" firstAttribute="bottom" secondItem="Mo3-OW-8PS" secondAttribute="bottom" id="Xip-KW-PN2"/>
                             <constraint firstItem="f6d-HG-UOl" firstAttribute="leading" secondItem="Mo3-OW-8PS" secondAttribute="leading" id="cKB-uC-xci"/>
                             <constraint firstItem="Mo3-OW-8PS" firstAttribute="top" secondItem="be4-hQ-PFo" secondAttribute="bottom" constant="8" id="reh-QT-kEE"/>
@@ -79,6 +90,7 @@
                 <outlet property="addImageButton" destination="f6d-HG-UOl" id="dk7-SU-mpM"/>
                 <outlet property="backgroundImageView" destination="Mo3-OW-8PS" id="g1F-sB-YrJ"/>
                 <outlet property="mainTitleTextLabel" destination="be4-hQ-PFo" id="odL-1u-cIg"/>
+                <outlet property="selectedImageView" destination="sMh-P9-dsF" id="DZ5-rD-sYJ"/>
             </connections>
             <point key="canvasLocation" x="257" y="330.5"/>
         </tableViewCell>

@@ -16,9 +16,13 @@
 
 + (WriteMainImageCell *)cell;
 
+@property (assign, nonatomic) NSInteger rowIndex;
+
 @property (weak, nonatomic) IBOutlet UITextField *mainTitleTextLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *addImageButton;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
+
 - (IBAction)addImageTouched:(id)sender;
 
 @end

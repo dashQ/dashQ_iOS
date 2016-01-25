@@ -32,9 +32,16 @@
                                     <constraint firstAttribute="width" secondItem="wR4-jB-7I5" secondAttribute="height" multiplier="16:13" id="MoW-Vh-3ni"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BM8-A3-EYx">
+                                <rect key="frame" x="8" y="58" width="288" height="234"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BM8-A3-EYx" secondAttribute="height" multiplier="16:13" id="BMH-FN-EB2"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyh-UG-sh0">
                                 <rect key="frame" x="8" y="58" width="288" height="234"/>
-                                <state key="normal" title="Add Image">
+                                <fontDescription key="fontDescription" type="system" pointSize="105"/>
+                                <state key="normal" title="+">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -68,10 +75,13 @@
                             <constraint firstItem="mT5-MQ-kVk" firstAttribute="leading" secondItem="OIH-rV-kJe" secondAttribute="leading" constant="12" id="Nt8-rr-Zg7"/>
                             <constraint firstItem="wR4-jB-7I5" firstAttribute="top" secondItem="fGk-la-BHv" secondAttribute="bottom" constant="8" id="SEW-li-RbA"/>
                             <constraint firstItem="N2e-Yo-vuk" firstAttribute="leading" secondItem="mT5-MQ-kVk" secondAttribute="leading" constant="-4" id="Tgn-jH-eLb"/>
+                            <constraint firstItem="BM8-A3-EYx" firstAttribute="top" secondItem="wR4-jB-7I5" secondAttribute="top" id="Wdg-RV-Jqr"/>
                             <constraint firstItem="wR4-jB-7I5" firstAttribute="trailing" secondItem="Zyh-UG-sh0" secondAttribute="trailing" id="aOq-5l-Zsg"/>
+                            <constraint firstAttribute="trailing" secondItem="BM8-A3-EYx" secondAttribute="trailing" constant="8" id="dYh-Kx-qoD"/>
                             <constraint firstAttribute="trailing" secondItem="fGk-la-BHv" secondAttribute="trailing" constant="8" id="e1U-Uo-G3z"/>
                             <constraint firstItem="wR4-jB-7I5" firstAttribute="bottom" secondItem="Zyh-UG-sh0" secondAttribute="bottom" id="fLn-gT-cwD"/>
                             <constraint firstItem="wR4-jB-7I5" firstAttribute="top" secondItem="Zyh-UG-sh0" secondAttribute="top" id="fN5-34-FJi"/>
+                            <constraint firstItem="BM8-A3-EYx" firstAttribute="leading" secondItem="OIH-rV-kJe" secondAttribute="leading" constant="8" id="qyZ-bA-f64"/>
                             <constraint firstItem="N2e-Yo-vuk" firstAttribute="top" secondItem="mT5-MQ-kVk" secondAttribute="top" constant="-7" id="vxW-Ze-Y74"/>
                             <constraint firstAttribute="trailing" secondItem="wR4-jB-7I5" secondAttribute="trailing" constant="8" id="yhd-pG-CgD"/>
                         </constraints>
@@ -96,6 +106,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="backgroundImageView" destination="wR4-jB-7I5" id="cKz-2v-z6x"/>
+                <outlet property="selectedImageView" destination="BM8-A3-EYx" id="Xtj-5V-CMF"/>
                 <outlet property="subImageButton" destination="Zyh-UG-sh0" id="1XT-cW-ycb"/>
                 <outlet property="subTextField" destination="fGk-la-BHv" id="b4b-Hg-5Rb"/>
                 <outlet property="subTextView" destination="mT5-MQ-kVk" id="awN-WY-2Ok"/>

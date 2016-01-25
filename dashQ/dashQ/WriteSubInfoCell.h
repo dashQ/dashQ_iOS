@@ -17,10 +17,12 @@ UITextViewDelegate>
 
 + (WriteSubInfoCell *)cell;
 
+@property (assign, nonatomic) NSInteger rowIndex;
 
 @property (weak, nonatomic) IBOutlet UIButton *subImageButton;
 @property (weak, nonatomic) IBOutlet UITextField *subTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *selectedImageView;
 @property (weak, nonatomic) IBOutlet UITextView *subTextView;
 @property (weak, nonatomic) IBOutlet UIImageView *textBackgroundImageView;
 

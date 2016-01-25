@@ -245,9 +245,6 @@ typedef enum {
     if ([segue.identifier isEqualToString:@""]) {
         
     }
-    
-    
-    
 }
 
 @end
