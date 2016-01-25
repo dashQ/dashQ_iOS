@@ -149,6 +149,10 @@
     
 }
 
+- (void)hideSearchButton:(BOOL)hide {
+    [self.commonHeaderView hideSearchButton:hide];
+}
+
 - (void)hideBackButton:(BOOL)hide {
     [self.commonHeaderView hideBackButton:hide];
 }

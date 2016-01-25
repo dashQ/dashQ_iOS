@@ -15,6 +15,7 @@
 #import "WriteMainImageCell.h"
 #import "WriteSubInfoCell.h"
 #import "CommonEmptyCell.h"
+#import "CommonLargeSpaceCell.h"
 
 //ViewControllers
 #import "ImagePickerViewController.h"

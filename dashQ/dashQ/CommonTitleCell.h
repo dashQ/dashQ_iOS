@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HEIGHT_HOOT_COMMON_TITLE_CELL 45.0f
+#define HEIGHT_COMMON_TITLE_CELL 45.0f
 
 @interface CommonTitleCell : UITableViewCell
 

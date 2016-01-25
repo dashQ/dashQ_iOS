@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HEIGHT_HOOT_COMMON_EMPTY_CELL 60.0f
+#define HEIGHT_COMMON_EMPTY_CELL 60.0f
 
 @interface CommonEmptyCell : UITableViewCell
 

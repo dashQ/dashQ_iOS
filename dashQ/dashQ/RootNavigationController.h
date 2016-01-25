@@ -25,6 +25,7 @@ CommonGadgetViewDelegate>
 @property (strong, nonatomic) CommonGadgetView *commonGadgetView;
 @property (strong, nonatomic) CommonHeaderView *commonHeaderView;
 
+- (void)hideSearchButton:(BOOL)hide;
 - (void)hideBackButton:(BOOL)hide;
 - (void)hideGadgetView:(BOOL)hide;
 - (void)hideAllTools:(BOOL)hide;

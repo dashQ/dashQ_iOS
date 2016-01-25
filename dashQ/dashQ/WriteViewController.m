@@ -27,9 +27,18 @@ typedef enum {
     return viewController;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [[RootNavigationController sharedInstance] hideSearchButton:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [[RootNavigationController sharedInstance] hideSearchButton:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     [self initWriteDataArray];
     [self initToolBar];
 }
@@ -205,11 +214,11 @@ typedef enum {
             
         case WriteEmptySection: {
             
-            static NSString *identifier = @"CommonEmptyCell";
+            static NSString *identifier = @"CommonLargeSpaceCell";
             
-            CommonEmptyCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+            CommonLargeSpaceCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
             if (!cell) {
-                cell = [CommonEmptyCell cell];
+                cell = [CommonLargeSpaceCell cell];
             }
             
             return cell;
@@ -229,7 +238,7 @@ typedef enum {
     switch (sectionIndex) {
             
         case WriteTitleSection:
-            return HEIGHT_HOOT_COMMON_TITLE_CELL;
+            return HEIGHT_COMMON_TITLE_CELL;
             
         case WriteReviewSection: {
             
@@ -243,7 +252,7 @@ typedef enum {
             }
         }
         case WriteEmptySection:
-            return HEIGHT_HOOT_COMMON_EMPTY_CELL;
+            return HEIGHT_COMMON_LARGE_SPACE_CELL;
             
         default:
             break;
