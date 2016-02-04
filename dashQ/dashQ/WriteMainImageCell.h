@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL 321.0f
+#define HEIGHT_WRITE_MAIN_IMAGE_CELL 321.0f
 
 @interface WriteMainImageCell : UITableViewCell
 

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HEIGHT_HOME_ITEM_CELL 181.0f
+#define HEIGHT_HOME_ITEM_CELL 142.0f
 
 @interface HomeItemCell : UITableViewCell
 

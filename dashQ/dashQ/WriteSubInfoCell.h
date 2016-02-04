@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define HEIGHT_HOOT_WRITE_SUB_INFO_CELL 461.0f
+#define HEIGHT_WRITE_SUB_INFO_CELL 461.0f
 
 @interface WriteSubInfoCell : UITableViewCell <
 UITextViewDelegate>

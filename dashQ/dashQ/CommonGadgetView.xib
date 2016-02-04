@@ -8,13 +8,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="CommonGadgetView" id="iN0-l3-epB" customClass="CommonGadgetView">
-            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-NB-vth">
-                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                    <rect key="frame" x="5" y="5" width="40" height="40"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="Menu">
+                    <state key="normal" title="Menu" image="3line_bl">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -23,16 +23,19 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="bsn-NB-vth" secondAttribute="bottom" id="5ed-jm-Bcx"/>
-                <constraint firstItem="bsn-NB-vth" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O4A-xY-IuQ"/>
-                <constraint firstItem="bsn-NB-vth" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="S5u-Gj-6vf"/>
-                <constraint firstAttribute="trailing" secondItem="bsn-NB-vth" secondAttribute="trailing" id="mBV-py-bpt"/>
+                <constraint firstAttribute="bottom" secondItem="bsn-NB-vth" secondAttribute="bottom" constant="5" id="5ed-jm-Bcx"/>
+                <constraint firstItem="bsn-NB-vth" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="O4A-xY-IuQ"/>
+                <constraint firstItem="bsn-NB-vth" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="S5u-Gj-6vf"/>
+                <constraint firstAttribute="trailing" secondItem="bsn-NB-vth" secondAttribute="trailing" constant="5" id="mBV-py-bpt"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="228" y="74.5"/>
+            <point key="canvasLocation" x="228" y="84"/>
         </view>
     </objects>
+    <resources>
+        <image name="3line_bl" width="144" height="144"/>
+    </resources>
 </document>

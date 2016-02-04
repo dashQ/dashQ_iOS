@@ -23,5 +23,6 @@
 
 @property (strong, nonatomic) RootNavigationController *rootNavigationController;
 @property (strong, nonatomic) NSMutableArray *sections;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end

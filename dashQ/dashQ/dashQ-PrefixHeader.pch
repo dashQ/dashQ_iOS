@@ -25,6 +25,7 @@
 #import "iOS8Utility.h"
 #import "RootNavigationController.h"
 #import "UIImage+Ext.h"
+#import "CommonDefines.h"
 
 //Common Views
 #import "CommonHeaderView.h"

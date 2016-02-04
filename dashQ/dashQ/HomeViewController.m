@@ -47,7 +47,40 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
+- (void)updateData {
+    
+    NSMutableArray *dataArray = [NSMutableArray array];
+    
+    
+    UIImage *babyImage = [UIImage imageNamed:@"baby"];
+    UIImage *cookingImage = [UIImage imageNamed:@"cooking"];
+    UIImage *datingImage = [UIImage imageNamed:@"dating"];
+    UIImage *exerciseImage = [UIImage imageNamed:@"exercise"];
+    UIImage *hobbyImage = [UIImage imageNamed:@"hobby"];
+    UIImage *makeupImage = [UIImage imageNamed:@"makeup"];
+    UIImage *baby2Image = [UIImage imageNamed:@"baby"];
+    UIImage *cooking2Image = [UIImage imageNamed:@"cooking"];
+    UIImage *makeup2Image = [UIImage imageNamed:@"exercise"];
+    UIImage *makeup3Image = [UIImage imageNamed:@"dating"];
+    
+    [dataArray addObject:babyImage];
+    [dataArray addObject:cookingImage];
+    [dataArray addObject:datingImage];
+    [dataArray addObject:exerciseImage];
+    [dataArray addObject:hobbyImage];
+    [dataArray addObject:makeupImage];
+    [dataArray addObject:baby2Image];
+    [dataArray addObject:cooking2Image];
+    [dataArray addObject:makeup2Image];
+    [dataArray addObject:makeup3Image];
+    
+    self.dataArray = dataArray;
+    
+}
+
 - (void)update {
+    
+    [self updateData];
     
     NSMutableArray *sections = [NSMutableArray array];
     
@@ -89,6 +122,8 @@ typedef enum {
     switch (sectionIndex) {
         case HomeItemSection: {
             
+            
+            
             static NSString *identifier = @"HomeItemCell";
             
             HomeItemCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -97,8 +132,11 @@ typedef enum {
                 cell.delegate = self;
             }
             
+            UIImage *cellImage = [self.dataArray objectAtIndex:indexPath.row];
             
-            [cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/b/b5/800x600_Wallpaper_Blue_Sky.png"]];
+            [cell.itemImageView setImage:cellImage];
+            
+            //[cell.itemImageView sd_setImageWithURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/b/b5/800x600_Wallpaper_Blue_Sky.png"]];
             
             //            [SDWebImageDownloader.sharedDownloader downloadImageWithURL:[NSURL URLWithString:@"http://i.ebayimg.com/00/s/ODAwWDgwMA==/z/MgkAAOSwPcVVqH4J/$_35.JPG"]
             //                                                                options:0
@@ -126,7 +164,7 @@ typedef enum {
     switch (sectionIndex) {
         case HomeItemSection:
             
-            return [self heightDynamicCell:HEIGHT_HOME_ITEM_CELL alpha375:12.0f alpha414:18.0f];
+            return [self heightDynamicCell:HEIGHT_HOME_ITEM_CELL alpha375:0.0f alpha414:0.0f];
             
         default:
             break;

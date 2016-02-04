@@ -44,15 +44,15 @@
                          self.centerXFavouritesConstraint.constant = 50.0f;
                          self.bottomFavouritesConstraint.constant = 100.0f;
                          
-                         self.centerXMyHootConstraint.constant = -50.0f;
-                         self.bottomMyHootConstraint.constant = 100.0f;
+                         self.centerXMyConstraint.constant = -50.0f;
+                         self.bottomMyConstraint.constant = 100.0f;
                          
                          self.centerXSettingsConstraint.constant = -100.0f;
                          self.bottomSettingsConstraint.constant = 50.0f;
                          
                          self.writeButton.alpha = 1.0f;
                          self.favouitesButton.alpha = 1.0f;
-                         self.myHootButton.alpha = 1.0f;
+                         self.myButton.alpha = 1.0f;
                          self.settingsButton.alpha = 1.0f;
                          
                          [self setNeedsDisplay];
@@ -75,15 +75,15 @@
                          self.centerXFavouritesConstraint.constant = 0.0f;
                          self.bottomFavouritesConstraint.constant = 0.0f;
                          
-                         self.centerXMyHootConstraint.constant = 0.0f;
-                         self.bottomMyHootConstraint.constant = 0.0f;
+                         self.centerXMyConstraint.constant = 0.0f;
+                         self.bottomMyConstraint.constant = 0.0f;
                          
                          self.centerXSettingsConstraint.constant = 0.0f;
                          self.bottomSettingsConstraint.constant = 0.0f;
                          
                          self.writeButton.alpha = 0.0f;
                          self.favouitesButton.alpha = 0.0f;
-                         self.myHootButton.alpha = 0.0f;
+                         self.myButton.alpha = 0.0f;
                          self.settingsButton.alpha = 0.0f;
                          
                          [self setNeedsDisplay];
@@ -114,10 +114,10 @@
     }
 }
 
-- (IBAction)myHootTouched:(id)sender {
+- (IBAction)myTouched:(id)sender {
     
     if (self.delegate) {
-        [self.delegate commonGadgetToolsViewMyHootTouched:self];
+        [self.delegate commonGadgetToolsViewMyTouched:self];
     }
 }
 

@@ -90,13 +90,13 @@
                                views:NSDictionaryOfVariableBindings(view)]];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:[view(30)]"
+                               constraintsWithVisualFormat:@"V:[view(50)]"
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(view)]];
     
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"H:[view(46)]"
+                               constraintsWithVisualFormat:@"H:[view(50)]"
                                options:0
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(view)]];
@@ -199,7 +199,7 @@
     
 }
 
-- (void)commonGadgetToolsViewMyHootTouched:(CommonGadgetToolsView *)view {
+- (void)commonGadgetToolsViewMyTouched:(CommonGadgetToolsView *)view {
     
 }
 

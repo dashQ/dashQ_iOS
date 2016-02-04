@@ -75,6 +75,7 @@
 
 - (void)shrinkSearchBar {
     
+    
     [UIView animateWithDuration:0.3f
                      animations:^{
                          
@@ -86,7 +87,9 @@
                          [self layoutIfNeeded];
                          
                      }
-                     completion:nil];
+                     completion:^(BOOL finished){
+                         self.searchButton.selected = NO;
+                     }];
     
 }
 
@@ -108,7 +111,9 @@
                          [self layoutIfNeeded];
                          
                      }
-                     completion:nil];
+                     completion:^(BOOL finished){
+                         self.searchButton.selected = YES;
+                     }];
     
 }
 

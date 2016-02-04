@@ -14,4 +14,5 @@
 
 + (WriteToolBarView *)view;
 
+@property (weak, nonatomic) IBOutlet UIView *topLineView;
 @end

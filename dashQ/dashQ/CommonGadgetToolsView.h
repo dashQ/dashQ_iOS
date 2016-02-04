@@ -13,7 +13,7 @@
 @property (assign, nonatomic) id delegate;
 
 @property (weak, nonatomic) IBOutlet UIButton *settingsButton;
-@property (weak, nonatomic) IBOutlet UIButton *myHootButton;
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
 @property (weak, nonatomic) IBOutlet UIButton *favouitesButton;
 @property (weak, nonatomic) IBOutlet UIButton *writeButton;
 
@@ -26,8 +26,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomWriteConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerXWriteConstraint;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomMyHootConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerXMyHootConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomMyConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centerXMyConstraint;
 
 - (void)updateTools;
 - (void)showAllTools;
@@ -35,7 +35,7 @@
 
 - (IBAction)writeTouched:(id)sender;
 - (IBAction)favouriteTouched:(id)sender;
-- (IBAction)myHootTouched:(id)sender;
+- (IBAction)myTouched:(id)sender;
 - (IBAction)settingsTouched:(id)sender;
 
 
@@ -49,7 +49,7 @@
 
 - (void)commonGadgetToolsViewWriteTouched:(CommonGadgetToolsView *)view;
 - (void)commonGadgetToolsViewFavouritesTouched:(CommonGadgetToolsView *)view;
-- (void)commonGadgetToolsViewMyHootTouched:(CommonGadgetToolsView *)view;
+- (void)commonGadgetToolsViewMyTouched:(CommonGadgetToolsView *)view;
 - (void)commonGadgetToolsViewSettingsTouched:(CommonGadgetToolsView *)view;
 
 @end

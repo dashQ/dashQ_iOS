@@ -12,13 +12,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by5-o8-Lg4">
-                    <rect key="frame" x="103" y="120" width="55" height="30"/>
+                    <rect key="frame" x="110" y="105" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="B21-cb-sck"/>
-                        <constraint firstAttribute="width" constant="55" id="XoW-tm-wUQ"/>
+                        <constraint firstAttribute="height" constant="40" id="B21-cb-sck"/>
+                        <constraint firstAttribute="width" constant="40" id="XoW-tm-wUQ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Write">
+                    <state key="normal" title="Write" image="wright_bl">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -27,13 +27,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYR-vp-PJZ">
-                    <rect key="frame" x="98" y="120" width="65" height="30"/>
+                    <rect key="frame" x="110" y="105" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="0cB-Pp-7dI"/>
-                        <constraint firstAttribute="width" constant="65" id="mBw-fY-5eU"/>
+                        <constraint firstAttribute="height" constant="40" id="0cB-Pp-7dI"/>
+                        <constraint firstAttribute="width" constant="40" id="mBw-fY-5eU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Favourites">
+                    <state key="normal" title="Favourites" image="star_bl">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -41,29 +41,29 @@
                         <action selector="favouriteTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="a4k-uT-ors"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSr-qQ-m8c">
-                    <rect key="frame" x="103" y="120" width="55" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSr-qQ-m8c" userLabel="My Button">
+                    <rect key="frame" x="110" y="105" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="55" id="B0y-ry-f66"/>
-                        <constraint firstAttribute="height" constant="30" id="onG-5F-hTZ"/>
+                        <constraint firstAttribute="width" constant="40" id="B0y-ry-f66"/>
+                        <constraint firstAttribute="height" constant="40" id="onG-5F-hTZ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="MyHoot">
+                    <state key="normal" image="mymenu_bl">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="myHootTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="5mo-st-MnF"/>
+                        <action selector="myTouched:" destination="iN0-l3-epB" eventType="touchUpInside" id="ZGA-XC-iXk"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7M-gG-upt">
-                    <rect key="frame" x="103" y="120" width="55" height="30"/>
+                    <rect key="frame" x="110" y="105" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="4Wa-eQ-MDI"/>
-                        <constraint firstAttribute="width" constant="55" id="CKq-cl-ntZ"/>
+                        <constraint firstAttribute="height" constant="40" id="4Wa-eQ-MDI"/>
+                        <constraint firstAttribute="width" constant="40" id="CKq-cl-ntZ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Settings">
+                    <state key="normal" title="Settings" image="setting_blue">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -75,31 +75,37 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="K7M-gG-upt" secondAttribute="centerX" id="3zT-Ht-edz"/>
-                <constraint firstAttribute="bottom" secondItem="by5-o8-Lg4" secondAttribute="bottom" id="9cX-MN-QYO"/>
+                <constraint firstAttribute="bottom" secondItem="by5-o8-Lg4" secondAttribute="bottom" constant="5" id="9cX-MN-QYO"/>
                 <constraint firstAttribute="centerX" secondItem="IYR-vp-PJZ" secondAttribute="centerX" id="CKO-5q-yBY"/>
                 <constraint firstAttribute="centerX" secondItem="by5-o8-Lg4" secondAttribute="centerX" id="F1T-lo-BFY"/>
-                <constraint firstAttribute="bottom" secondItem="tSr-qQ-m8c" secondAttribute="bottom" id="Hbi-Yq-ghB"/>
-                <constraint firstAttribute="bottom" secondItem="K7M-gG-upt" secondAttribute="bottom" id="m3b-af-Atr"/>
+                <constraint firstAttribute="bottom" secondItem="tSr-qQ-m8c" secondAttribute="bottom" constant="5" id="Hbi-Yq-ghB"/>
+                <constraint firstAttribute="bottom" secondItem="K7M-gG-upt" secondAttribute="bottom" constant="5" id="m3b-af-Atr"/>
                 <constraint firstAttribute="centerX" secondItem="tSr-qQ-m8c" secondAttribute="centerX" id="rg9-dl-AG2"/>
-                <constraint firstAttribute="bottom" secondItem="IYR-vp-PJZ" secondAttribute="bottom" id="xMy-XY-iKV"/>
+                <constraint firstAttribute="bottom" secondItem="IYR-vp-PJZ" secondAttribute="bottom" constant="5" id="xMy-XY-iKV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bottomFavouritesConstraint" destination="xMy-XY-iKV" id="koR-vq-Ntf"/>
-                <outlet property="bottomMyHootConstraint" destination="Hbi-Yq-ghB" id="Dod-vW-afX"/>
+                <outlet property="bottomMyConstraint" destination="Hbi-Yq-ghB" id="0LD-iA-HoS"/>
                 <outlet property="bottomSettingsConstraint" destination="m3b-af-Atr" id="jcb-1M-GBU"/>
                 <outlet property="bottomWriteConstraint" destination="9cX-MN-QYO" id="hns-b8-aU2"/>
                 <outlet property="centerXFavouritesConstraint" destination="CKO-5q-yBY" id="FRL-sJ-DEW"/>
-                <outlet property="centerXMyHootConstraint" destination="rg9-dl-AG2" id="hVh-P8-5H1"/>
+                <outlet property="centerXMyConstraint" destination="rg9-dl-AG2" id="lCM-WU-Lz3"/>
                 <outlet property="centerXSettingsConstraint" destination="3zT-Ht-edz" id="3A0-rj-ypb"/>
                 <outlet property="centerXWriteConstraint" destination="F1T-lo-BFY" id="KYC-cZ-tdQ"/>
                 <outlet property="favouitesButton" destination="IYR-vp-PJZ" id="3UC-8H-840"/>
-                <outlet property="myHootButton" destination="tSr-qQ-m8c" id="WVg-qz-N9t"/>
+                <outlet property="myButton" destination="tSr-qQ-m8c" id="0vv-4C-FaU"/>
                 <outlet property="settingsButton" destination="K7M-gG-upt" id="nO9-TK-dbv"/>
                 <outlet property="writeButton" destination="by5-o8-Lg4" id="wQQ-WH-4jl"/>
             </connections>
-            <point key="canvasLocation" x="249" y="-9.5"/>
+            <point key="canvasLocation" x="249" y="-10"/>
         </view>
     </objects>
+    <resources>
+        <image name="mymenu_bl" width="432" height="432"/>
+        <image name="setting_blue" width="432" height="432"/>
+        <image name="star_bl" width="204" height="233"/>
+        <image name="wright_bl" width="432" height="432"/>
+    </resources>
 </document>

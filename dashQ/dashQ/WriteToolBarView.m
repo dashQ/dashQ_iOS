@@ -20,4 +20,9 @@
     return view;
 }
 
+- (void)awakeFromNib {
+
+    self.topLineView.backgroundColor = DEFAULT_DASHQ_MAIN_COLOR;    
+}
+
 @end

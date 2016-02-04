@@ -11,6 +11,7 @@
 typedef enum {
     WriteTitleSection
     ,WriteReviewSection
+    ,WriteAddSection
     ,WriteEmptySection
 } WriteSections;
 
@@ -29,6 +30,7 @@ typedef enum {
 
 - (void)viewWillAppear:(BOOL)animated {
     [[RootNavigationController sharedInstance] hideSearchButton:YES];
+    [[RootNavigationController sharedInstance] hideBackButton:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -99,6 +101,7 @@ typedef enum {
     NSMutableArray *sections = [NSMutableArray array];
     [sections addObject:@(WriteTitleSection)];
     [sections addObject:@(WriteReviewSection)];
+    [sections addObject:@(WriteAddSection)];
     [sections addObject:@(WriteEmptySection)];
     
     self.sections = sections;
@@ -126,6 +129,8 @@ typedef enum {
         case WriteReviewSection: {
             return self.writeModelArray.count;
         }
+        case WriteAddSection:
+            return 1;
         case WriteEmptySection:
             return 1;
         default:
@@ -175,13 +180,13 @@ typedef enum {
             
                 if (writeModel.writeImage) {
                     cell.selectedImageView.image = writeModel.writeImage;
-                    cell.addImageButton.titleLabel.text = @"";
+                    [cell.addImageButton setTitle:@"" forState:UIControlStateNormal];
                 }
                 else {
-                    cell.addImageButton.titleLabel.text = @"+";
+                    [cell.addImageButton setTitle:@"+" forState:UIControlStateNormal];
                     cell.selectedImageView.image = nil;
                 }
-            
+                
                 return cell;
             }
             
@@ -201,15 +206,27 @@ typedef enum {
                 
                 if (writeModel.writeImage) {
                     cell.selectedImageView.image = writeModel.writeImage;
-                    cell.subImageButton.titleLabel.text = @"";
+                    [cell.subImageButton setTitle:@"" forState:UIControlStateNormal];
                 }
                 else {
-                    cell.subImageButton.titleLabel.text = @"+";
+                    [cell.subImageButton setTitle:@"+" forState:UIControlStateNormal];
                     cell.selectedImageView.image = nil;
                 }
                 
                 return cell;
             }
+        }
+        case WriteAddSection: {
+            
+            static NSString *identifier = @"WriteAddCell";
+            
+            WriteAddCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+            if (!cell) {
+                cell = [WriteAddCell cell];
+                cell.delegate = self;
+            }
+            
+            return cell;
         }
             
         case WriteEmptySection: {
@@ -245,12 +262,16 @@ typedef enum {
             WriteInfoModel *writeModel = [self.writeModelArray objectAtIndex:indexPath.row];
             
             if (writeModel.modelType == WriteMainType) {
-                return [self heightDynamicCell:HEIGHT_HOOT_WRITE_MAIN_IMAGE_CELL alpha375:12.0f alpha414:18.0f];
+                return [self heightDynamicCell:HEIGHT_WRITE_MAIN_IMAGE_CELL alpha375:12.0f alpha414:18.0f];
             }
             else if (writeModel.modelType == WriteSubType) {
-                return [self heightDynamicCell:HEIGHT_HOOT_WRITE_SUB_INFO_CELL alpha375:12.0f alpha414:18.0f];
+                return [self heightDynamicCell:HEIGHT_WRITE_SUB_INFO_CELL alpha375:12.0f alpha414:18.0f];
             }
         }
+            
+        case WriteAddSection:
+            return HEIGHT_WRITE_ADD_CELL;
+            
         case WriteEmptySection:
             return HEIGHT_COMMON_LARGE_SPACE_CELL;
             
@@ -271,50 +292,31 @@ typedef enum {
         }
             break;
             
+        case WriteAddSection: {
+            [self addReview];
+        }
+            break;
+            
         default:
             break;
     }
 }
 
-- (void)addCustomInputViewTextField:(UITextField *)textField {
+- (void)addReview {
     
-    CustomInputView *customInputView = [CustomInputView view];
-    customInputView.searchButton.hidden = YES;
-    customInputView.delegate = self;
+    WriteInfoModel *writeSubModel = [[WriteInfoModel alloc] init];
+    writeSubModel.modelType = WriteSubType;
     
-    [textField setInputAccessoryView:customInputView];
+    [self.writeModelArray addObject:writeSubModel];
+    
+    [self.tableView reloadData];
+
 }
 
-- (void)addCustomInputViewTextView:(UITextView *)textView {
-    
-    CustomInputView *customInputView = [CustomInputView view];
-    customInputView.searchButton.hidden = YES;
-    customInputView.delegate = self;
-    
-    [textView setInputAccessoryView:customInputView];
-}
-
-#pragma mark CustomInputViewDelegate
-- (void)customInputViewDoneTouched:(CustomInputView *)view {
-    [self.view endEditing:YES];
-}
-
-- (void)callImagePickerController {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:nil];
-}
 
 #pragma mark WriteMainImageCell Delegate Methods
 
 - (void)writeMainImageCellAddImageTouched:(WriteMainImageCell *)cell {
-    
-    //ImagePickerViewController *imagePickerViewController = [ImagePickerViewController viewController];
-    //[self presentViewController:imagePickerViewController animated:YES completion:nil];
     
     self.selectedRowIndex = cell.rowIndex;
     [self callImagePickerController];

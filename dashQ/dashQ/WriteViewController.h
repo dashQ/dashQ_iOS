@@ -16,14 +16,16 @@
 #import "WriteSubInfoCell.h"
 #import "CommonEmptyCell.h"
 #import "CommonLargeSpaceCell.h"
+#import "WriteAddCell.h"
 
 //ViewControllers
 #import "ImagePickerViewController.h"
+#import "BaseViewController.h"
 
 //Models
 #import "WriteInfoModel.h"
 
-@interface WriteViewController : UIViewController <
+@interface WriteViewController : BaseViewController <
 WriteMainImageCellDelegate
 ,WriteSubInfoCellDelegate
 ,UIImagePickerControllerDelegate

@@ -11,31 +11,32 @@
             <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8n-f4-xCL" userLabel="LineView">
-                    <rect key="frame" x="8" y="38" width="204" height="1"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="1" id="SmH-lz-WrC"/>
-                    </constraints>
-                </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Search Keyword" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-3Y-ahj">
-                    <rect key="frame" x="8" y="8" width="204" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptybox_bl" translatesAutoresizingMaskIntoConstraints="NO" id="Gx8-2M-iN8">
+                    <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Search Keyword" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-3Y-ahj">
+                    <rect key="frame" x="15" y="8" width="204" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="iN0-l3-epB" id="Ut7-Fw-Xo0"/>
                     </connections>
                 </textField>
             </subviews>
-            <color key="backgroundColor" red="0.60407941590000003" green="0.67365488579999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="F8n-f4-xCL" secondAttribute="bottom" constant="6" id="9qW-IO-Qgt"/>
+                <constraint firstAttribute="trailing" secondItem="Gx8-2M-iN8" secondAttribute="trailing" id="CIM-xk-ZTf"/>
                 <constraint firstItem="zwd-3Y-ahj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="FhV-T1-520"/>
                 <constraint firstAttribute="bottom" secondItem="zwd-3Y-ahj" secondAttribute="bottom" constant="7" id="JJ3-VQ-HMa"/>
-                <constraint firstItem="zwd-3Y-ahj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="8" id="VTq-hr-eXf"/>
-                <constraint firstItem="F8n-f4-xCL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="8" id="av0-tr-HGh"/>
-                <constraint firstAttribute="trailing" secondItem="F8n-f4-xCL" secondAttribute="trailing" priority="750" constant="8" id="g0s-YZ-OlL"/>
-                <constraint firstAttribute="trailing" secondItem="zwd-3Y-ahj" secondAttribute="trailing" priority="750" constant="8" id="qtd-Uw-mR4"/>
+                <constraint firstItem="zwd-3Y-ahj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" priority="750" constant="15" id="VTq-hr-eXf"/>
+                <constraint firstItem="Gx8-2M-iN8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Wlq-AS-bO2"/>
+                <constraint firstItem="Gx8-2M-iN8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X1v-oT-5Jh"/>
+                <constraint firstAttribute="trailing" secondItem="zwd-3Y-ahj" secondAttribute="trailing" priority="750" constant="1" id="qtd-Uw-mR4"/>
+                <constraint firstAttribute="bottom" secondItem="Gx8-2M-iN8" secondAttribute="bottom" id="umd-jw-x2z"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -45,4 +46,7 @@
             <point key="canvasLocation" x="186" y="166.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="emptybox_bl" width="1176" height="168"/>
+    </resources>
 </document>
