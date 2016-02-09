@@ -180,7 +180,7 @@ typedef enum {
     switch (sectionIndex) {
         case HomeItemSection: {
             
-            [self sendToItemViewController];
+            [self sendToItemViewController:@""];
             
         }
             break;
@@ -198,13 +198,6 @@ typedef enum {
         vc.viewControllerTitle = @"Write How-To";
         
     }
-}
-
-- (void)sendToItemViewController {
-    
-    ItemViewController *itemViewController = [ItemViewController viewController];
-    [self.navigationController pushViewController:itemViewController animated:YES];
-    
 }
 
 @end

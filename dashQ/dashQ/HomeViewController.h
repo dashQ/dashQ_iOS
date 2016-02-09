@@ -11,18 +11,18 @@
 //ViewControllers
 #import "ItemViewController.h"
 #import "WriteViewController.h"
+#import "BaseViewController.h"
 
 //Table Cells
 #import "HomeItemCell.h"
 
-@interface HomeViewController : UIViewController <
+@interface HomeViewController : BaseViewController <
   UITableViewDelegate
 , UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) RootNavigationController *rootNavigationController;
-@property (strong, nonatomic) NSMutableArray *sections;
 @property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end

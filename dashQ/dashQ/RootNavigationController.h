@@ -15,6 +15,7 @@
 
 //ViewControllers
 #import "WriteViewController.h"
+#import "MyViewController.h"
 
 @interface RootNavigationController : UINavigationController <
 CommonGadgetViewDelegate>

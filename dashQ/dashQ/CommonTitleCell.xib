@@ -15,10 +15,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grJ-dL-lFu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzC-gm-iW8">
-                                <rect key="frame" x="35" y="19" width="250" height="21"/>
+                                <rect key="frame" x="35" y="12" width="250" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fJS-tf-aSn"/>
+                                    <constraint firstAttribute="width" constant="250" id="sHu-dP-j4C"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -26,20 +30,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="GzC-gm-iW8" secondAttribute="centerX" id="EVW-bu-adU"/>
-                            <constraint firstAttribute="trailing" secondItem="GzC-gm-iW8" secondAttribute="trailing" constant="35" id="F97-kO-TJ4"/>
-                            <constraint firstItem="GzC-gm-iW8" firstAttribute="top" secondItem="grJ-dL-lFu" secondAttribute="top" constant="19" id="jMi-KL-Z71"/>
-                            <constraint firstItem="GzC-gm-iW8" firstAttribute="leading" secondItem="grJ-dL-lFu" secondAttribute="leading" constant="35" id="uqh-FX-QgJ"/>
+                            <constraint firstItem="GzC-gm-iW8" firstAttribute="top" secondItem="grJ-dL-lFu" secondAttribute="top" constant="12" id="9fn-i4-qop"/>
+                            <constraint firstItem="GzC-gm-iW8" firstAttribute="centerX" secondItem="grJ-dL-lFu" secondAttribute="centerX" id="hhL-op-XXn"/>
                         </constraints>
                     </view>
                 </subviews>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="grJ-dL-lFu" secondAttribute="bottom" constant="-16" id="4b5-ot-ujG"/>
-                    <constraint firstItem="grJ-dL-lFu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PgG-Fc-Wpf"/>
-                    <constraint firstAttribute="trailing" secondItem="grJ-dL-lFu" secondAttribute="trailing" id="UvX-kV-nlM"/>
-                    <constraint firstItem="grJ-dL-lFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="shQ-Am-c1M"/>
-                </constraints>
             </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="grJ-dL-lFu" secondAttribute="bottom" id="943-tN-Atc"/>
+                <constraint firstItem="grJ-dL-lFu" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="VlI-vg-KMf"/>
+                <constraint firstAttribute="trailing" secondItem="grJ-dL-lFu" secondAttribute="trailing" id="hcT-iY-BN2"/>
+                <constraint firstItem="grJ-dL-lFu" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="ybV-Ji-CcU"/>
+            </constraints>
             <connections>
                 <outlet property="titleLabel" destination="GzC-gm-iW8" id="lsL-dC-g6L"/>
             </connections>

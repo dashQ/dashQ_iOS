@@ -41,7 +41,7 @@ typedef enum {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [self initWriteDataArray];
+    [self initTestWriteDataArray];
     [self initToolBar];
 }
 
@@ -50,7 +50,7 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
-- (void)initWriteDataArray {
+- (void)initTestWriteDataArray {
     
     self.writeModelArray = [NSMutableArray array];
     

@@ -36,7 +36,6 @@ WriteMainImageCellDelegate
 @property (strong, nonatomic) WriteToolBarView *toolBarView;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSMutableArray *sections;
 
 @property (strong, nonatomic) NSString *viewControllerTitle;
 

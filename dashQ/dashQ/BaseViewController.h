@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseViewController : UIViewController <
-UIImagePickerControllerDelegate
-,UINavigationControllerDelegate>
+    UIImagePickerControllerDelegate
+,   UINavigationControllerDelegate>
+
+//Sections
+@property (strong, nonatomic) NSMutableArray *sections;
 
 // Add CustomInputView
 - (void)addCustomInputViewTextField:(UITextField *)textField;
@@ -21,5 +24,8 @@ UIImagePickerControllerDelegate
 
 // Call ImagePickerController
 - (void)callImagePickerController;
+
+//Send to ItemViewController
+- (void)sendToItemViewController:(NSString *)itemNo;
 
 @end

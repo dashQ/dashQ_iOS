@@ -216,21 +216,21 @@ typedef enum {
     switch (sectionIndex) {
         case ItemMainTitleSection: {
             
-            [self performSegueWithIdentifier:@"WriteViewControllerPush" sender:self];
+            //[self performSegueWithIdentifier:@"WriteViewControllerPush" sender:self];
             
         }
             break;
             
         case ItemSubSection: {
             
-            [self performSegueWithIdentifier:@"HomeTableCellPush" sender:self];
+            //[self performSegueWithIdentifier:@"HomeTableCellPush" sender:self];
             
         }
             break;
             
         case ItemReferenceSection: {
             
-            [self performSegueWithIdentifier:@"HomeTableCellPush" sender:self];
+            //[self performSegueWithIdentifier:@"HomeTableCellPush" sender:self];
             
         }
             break;
@@ -240,11 +240,5 @@ typedef enum {
     }
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString:@""]) {
-        
-    }
-}
 
 @end

@@ -180,6 +180,12 @@
     [self pushViewController:writeViewController animated:YES];
 }
 
+- (void)sendToMyViewController {
+    
+    MyViewController *writeViewController = [MyViewController viewController];
+    [self pushViewController:writeViewController animated:YES];
+}
+
 #pragma mark - Delegate Methods
 
 #pragma mark - CommonGadgetView Delegate Methods
@@ -200,7 +206,7 @@
 }
 
 - (void)commonGadgetToolsViewMyTouched:(CommonGadgetToolsView *)view {
-    
+    [self sendToMyViewController];
 }
 
 - (void)commonGadgetToolsViewSettingsTouched:(CommonGadgetToolsView *)view {

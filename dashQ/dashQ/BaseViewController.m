@@ -60,5 +60,15 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
+#pragma mark SendToItemViewController
+- (void)sendToItemViewController:(NSString *)itemNo {
+    
+    ItemViewController *itemViewController = [ItemViewController viewController];
+    itemViewController.itemNo = itemNo;
+    
+    [self.navigationController pushViewController:itemViewController animated:YES];
+    
+}
+
 
 @end
